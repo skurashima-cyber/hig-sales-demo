@@ -6,41 +6,46 @@
 <title>取引先責任者 | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
-<body data-page="acct">
+<body data-page="contact">
 <div class="wrap">
 
-  <div class="page-head">
-    <div class="icon">👤</div>
-    <div>
-      <div class="eyebrow">取引先 › 取引先責任者（キーマン）</div>
-      <h1>取引先責任者</h1>
+  <div class="lv-head">
+    <span class="obj-icon o-contact lg">👤</span>
+    <div class="meta">
+      <div class="kicker">取引先責任者</div>
+      <div class="lv-title">すべての取引先責任者<span class="caret">▾</span></div>
+      <div class="sub">5 件 • 並び替え基準: 氏名 • 数秒前に更新済み</div>
     </div>
-    <div class="actions"><a class="btn primary" href="#">新規</a></div>
+    <div class="acts"><a class="btn primary" href="#">新規</a></div>
   </div>
 
-  <div class="demo-note">⚠️ 本社キーマン（本社決済）と施設キーマン（個店決済）を分けて管理。営業として活用できるよう、両方を保持（ヒアリングB）。</div>
-
-  <div class="toolbar">
-    <span class="chip on">すべて</span><span class="chip">本社キーマン</span><span class="chip">施設キーマン</span>
-    <span class="grow"></span><span class="muted">決済区分でフィルタ</span>
+  <div class="lv-tabs">
+    <a class="on" href="contacts.html">すべて</a>
+    <a href="contacts.html">本社キーマン</a>
+    <a href="contacts.html">施設キーマン</a>
+    <a href="contacts.html">最近表示したデータ</a>
   </div>
 
-  <div class="card">
-    <div class="bd" style="padding:0">
-      <table class="tbl">
-        <thead><tr><th>氏名</th><th>役職</th><th>区分</th><th>所属（チェーン/施設）</th><th>担当営業</th><th>連絡先</th></tr></thead>
-        <tbody>
-          <tr><td class="lk">田所 様</td><td>購買本部長</td><td><span class="pill blue">本社キーマン</span></td><td><a href="account-detail.html">グランビューホテルズ</a></td><td>三原</td><td class="muted">03-xxxx-xxxx</td></tr>
-          <tr><td class="lk">林 様</td><td>支配人</td><td><span class="pill gray">施設キーマン</span></td><td><a href="facility-detail.html">グランビュー箱根</a></td><td>三原</td><td class="muted">0460-xx-xxxx</td></tr>
-          <tr><td class="lk">西 様</td><td>支配人</td><td><span class="pill gray">施設キーマン</span></td><td>グランビュー金沢</td><td>田村</td><td class="muted">076-xxx-xxxx</td></tr>
-          <tr><td class="lk">大橋 様</td><td>資材部長</td><td><span class="pill blue">本社キーマン</span></td><td>都ホテルチェーン</td><td>櫻井</td><td class="muted">06-xxxx-xxxx</td></tr>
-          <tr><td class="lk">中条 様</td><td>運営統括</td><td><span class="pill blue">本社キーマン</span></td><td>サンリゾート</td><td>田村</td><td class="muted">098-xxx-xxxx</td></tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="lv-toolbar">
+    <span class="count">5 件</span><span class="spring"></span>
+    <span class="search"><input placeholder="このリストを検索..."></span>
+    <span class="ic">⚙</span><span class="ic">▤</span><span class="ic">⟳</span>
   </div>
 
-  <div class="demo-note" style="margin-top:16px">💡 本社決済/個店決済の区分はキーマンの区分と連動。新規開業ホテルのオープン時に施設キーマンを登録するフローも想定（ヒアリングB/E）。</div>
+  <table class="lvt">
+    <thead>
+      <tr><th class="chk"><input type="checkbox"></th><th>氏名 <span class="sortcaret">▲</span></th><th>役職</th><th>区分</th><th>所属（取引先）</th><th>担当営業</th><th>電話</th><th class="rowact"></th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="contact-record.html">田所 様</a></td><td>購買本部長</td><td><span class="pill blue">本社キーマン</span></td><td><a href="account-detail.html">グランビューホテルズ</a></td><td>三原</td><td>03-xxxx-xxxx</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="contact-record.html">林 様</a></td><td>支配人</td><td><span class="pill gray">施設キーマン</span></td><td><a href="facility-detail.html">グランビュー箱根</a></td><td>三原</td><td>0460-xx-xxxx</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="contact-record.html">西 様</a></td><td>支配人</td><td><span class="pill gray">施設キーマン</span></td><td>グランビュー金沢</td><td>田村</td><td>076-xxx-xxxx</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="contact-record.html">大橋 様</a></td><td>資材部長</td><td><span class="pill blue">本社キーマン</span></td><td>都ホテルチェーン</td><td>櫻井</td><td>06-xxxx-xxxx</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="contact-record.html">中条 様</a></td><td>運営統括</td><td><span class="pill blue">本社キーマン</span></td><td>サンリゾート</td><td>田村</td><td>098-xxx-xxxx</td><td class="rowact">▾</td></tr>
+    </tbody>
+  </table>
+
+  <div class="demo-note" style="margin-top:14px">💡 本社キーマン（本社決済）と施設キーマン（個店決済）を区分で管理。リストビューで切替（ヒアリングB）。</div>
 
 </div>
 <script src="app.js"></script>

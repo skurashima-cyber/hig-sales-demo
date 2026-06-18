@@ -3,84 +3,85 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>施設詳細 | HIG 営業デモ</title>
+<title>グランビュー箱根 | 取引先 | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="acct">
 <div class="wrap">
 
-  <div class="page-head">
-    <div class="icon">🏩</div>
+  <div class="rec-head">
+    <div class="rec-top">
+      <span class="obj-icon o-acct lg">🏩</span>
+      <div class="meta">
+        <div class="crumb"><a href="accounts.html">取引先</a> ＞ <a href="account-detail.html">グランビューホテルズ</a> ＞ 施設</div>
+        <h1>グランビュー箱根</h1>
+      </div>
+      <div class="acts">
+        <a class="btn" href="activity-input.html">活動を記録</a>
+        <a class="btn" href="opportunity.html">商談</a>
+        <a class="btn primary" href="#">編集</a>
+      </div>
+    </div>
+    <div class="rec-fields">
+      <div class="rf"><span class="l">顧客コード</span><span class="v">10231</span></div>
+      <div class="rf"><span class="l">親チェーン</span><span class="v"><a href="account-detail.html">グランビューホテルズ</a></span></div>
+      <div class="rf"><span class="l">都道府県</span><span class="v">神奈川県</span></div>
+      <div class="rf"><span class="l">年間売上</span><span class="v">¥6.2M</span></div>
+      <div class="rf"><span class="l">状態</span><span class="v">導入済</span></div>
+      <div class="rf"><span class="l">所有者</span><span class="v">三原</span></div>
+    </div>
+  </div>
+
+  <div class="rec-tabs">
+    <a class="on" href="#detail">詳細</a>
+    <a href="#related">関連</a>
+    <a href="activities.html">活動</a>
+  </div>
+
+  <div class="rec-cols">
     <div>
-      <div class="eyebrow"><a href="accounts.html">取引先</a> › <a href="account-detail.html">グランビューホテルズ</a> › 施設</div>
-      <h1>グランビュー箱根</h1>
-    </div>
-    <div class="actions">
-      <a class="btn" href="activity-input.html">活動を記録</a>
-      <a class="btn primary" href="opportunity.html">商談を新規</a>
-    </div>
-  </div>
-
-  <div class="grid g2" style="margin-bottom:16px">
-    <div class="card">
-      <div class="hd">施設 基本情報</div>
-      <div class="bd">
-        <dl class="dl">
-          <dt><span class="req">★</span>施設名</dt><dd>グランビュー箱根</dd>
-          <dt><span class="req">★</span>顧客コード</dt><dd>10231（5桁・連番）</dd>
-          <dt>親チェーン</dt><dd><a href="account-detail.html">グランビューホテルズ</a></dd>
-          <dt><span class="req">★</span>都道府県</dt><dd>神奈川県</dd>
-          <dt>決済区分</dt><dd>本社決済</dd>
-          <dt>施設キーマン</dt><dd>支配人 林様</dd>
-          <dt>取引チャネル</dt><dd>直販（一部 東京マツシマ）<span class="pill gray" style="margin-left:6px">複数チャネルあり</span></dd>
-          <dt>状態</dt><dd><span class="pill green">導入済</span></dd>
-        </dl>
-      </div>
-    </div>
-    <div class="card">
-      <div class="hd">サマリ</div>
-      <div class="bd">
-        <div class="grid g2">
-          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">年間売上</div><div class="val">¥6.2<small>M</small></div></div>
-          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">客単価</div><div class="val">¥660<small>K</small></div></div>
-          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">最終発注</div><div class="val">12<small>日前</small></div></div>
-          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">導入品番</div><div class="val">7</div></div>
+      <div class="detail-sec" id="detail">
+        <h3><span class="caret">▾</span> 施設 情報</h3>
+        <div class="fgrid">
+          <div class="fitem"><div class="l"><span class="req">*</span>施設名</div><div class="v">グランビュー箱根 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l"><span class="req">*</span>顧客コード</div><div class="v">10231（5桁・連番）<span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">親チェーン</div><div class="v">グランビューホテルズ <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l"><span class="req">*</span>都道府県</div><div class="v">神奈川県 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">決済区分</div><div class="v">本社決済 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">施設キーマン</div><div class="v">支配人 林様 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">取引チャネル</div><div class="v">直販／東京マツシマ <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">客単価</div><div class="v">¥660K <span class="pencil">✎</span></div></div>
         </div>
-        <div class="legend" style="margin-top:10px"><span class="muted">同一施設が複数チャネルで取引するケースあり（チャネルは取引ごと）</span></div>
       </div>
-    </div>
-  </div>
 
-  <div class="grid g2" style="margin-bottom:16px">
-    <div class="card">
-      <div class="hd">導入品番（出荷実績）</div>
-      <div class="bd" style="padding:0">
-        <table class="tbl">
+      <div class="related" id="related">
+        <div class="rl-hd"><span class="obj-icon o-prod">📦</span> 導入品番（出荷実績）<span class="cnt">(7)</span></div>
+        <table class="lvt" style="border:0;border-radius:0">
           <thead><tr><th>品番</th><th>商品</th><th>チャネル</th><th class="num">年間</th></tr></thead>
           <tbody>
-            <tr><td class="lk">A95G</td><td>スキンケアパウチ</td><td>直販</td><td class="num">¥2.4M</td></tr>
-            <tr><td class="lk">A88G</td><td>インバス用ボトル</td><td>直販</td><td class="num">¥1.8M</td></tr>
-            <tr><td class="lk">SG-07</td><td>アメニティセット</td><td>直販</td><td class="num">¥1.2M</td></tr>
-            <tr><td class="lk">A12M</td><td>UV・リップ（PB）</td><td>東京マツシマ</td><td class="num">¥0.8M</td></tr>
+            <tr><td><a class="lk" href="product-record.html">A95G</a></td><td>スキンケアパウチ</td><td>直販</td><td class="num">¥2.4M</td></tr>
+            <tr><td><a class="lk" href="product-record.html">A88G</a></td><td>インバス用ボトル</td><td>直販</td><td class="num">¥1.8M</td></tr>
+            <tr><td><a class="lk" href="product-record.html">SG-07</a></td><td>アメニティセット</td><td>直販</td><td class="num">¥1.2M</td></tr>
+            <tr><td><a class="lk" href="product-record.html">A12M</a></td><td>UV・リップ(PB)</td><td>東京マツシマ</td><td class="num">¥0.8M</td></tr>
           </tbody>
         </table>
       </div>
     </div>
-    <div class="card">
-      <div class="hd">活動（直近）</div>
-      <div class="bd" style="padding:0">
-        <table class="tbl">
-          <tbody>
-            <tr><td><span class="pill blue">訪問</span></td><td>6/6 什器入替の相談</td><td class="muted">三原</td></tr>
-            <tr><td><span class="pill gray">TEL</span></td><td>5/30 追加発注の確認</td><td class="muted">三原</td></tr>
-            <tr><td><span class="pill amber">サンプル</span></td><td>6/2 SG-07送付 → 転換</td><td class="muted">三原</td></tr>
-          </tbody>
-        </table>
+
+    <div>
+      <div class="related act-panel">
+        <div class="rl-hd"><span class="obj-icon o-act">📋</span> 活動<span class="sp"></span><a class="more" href="activity-input.html">記録</a></div>
+        <div class="tl">
+          <div class="item"><span class="dot"></span><div class="when">6/6 ・ 訪問 ・ 三原</div><div class="body">什器入替の相談</div></div>
+          <div class="item"><span class="dot"></span><div class="when">6/2 ・ サンプル ・ 三原</div><div class="body">SG-07送付 → 転換</div></div>
+          <div class="item"><span class="dot"></span><div class="when">5/30 ・ TEL ・ 三原</div><div class="body">追加発注の確認</div></div>
+        </div>
+        <div class="foot"><a href="activities.html">すべて表示</a></div>
       </div>
     </div>
   </div>
 
-  <div class="demo-note">💡 施設は顧客コード5桁で一意（出荷データとの突合キー）。本社キーマンと施設キーマンを分けて管理。同一施設の複数チャネル取引に対応（ヒアリングB）。</div>
+  <div class="demo-note" style="margin-top:14px">💡 施設は取引先の「施設」レコードタイプ。顧客コード5桁が出荷データとの突合キー。同一施設の複数チャネル取引に対応（ヒアリングB）。</div>
 
 </div>
 <script src="app.js"></script>

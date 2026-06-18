@@ -3,94 +3,118 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>グランビューホテルズ | HIG 営業デモ</title>
+<title>グランビューホテルズ | 取引先 | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="acct">
 <div class="wrap">
 
-  <div class="page-head">
-    <div class="icon">🏨</div>
-    <div>
-      <div class="eyebrow"><a href="accounts.html">取引先</a> › チェーン運営会社</div>
-      <h1>グランビューホテルズ 株式会社</h1>
+  <!-- ハイライトパネル -->
+  <div class="rec-head">
+    <div class="rec-top">
+      <span class="obj-icon o-acct lg">🏢</span>
+      <div class="meta">
+        <div class="crumb"><a href="accounts.html">取引先</a> ＞ チェーン運営会社</div>
+        <h1>グランビューホテルズ 株式会社</h1>
+      </div>
+      <div class="acts">
+        <a class="btn" href="#">フォロー</a>
+        <a class="btn" href="activity-input.html">活動を記録</a>
+        <a class="btn" href="opportunity.html">商談</a>
+        <a class="btn primary" href="#">編集</a>
+      </div>
     </div>
-    <div class="actions">
-      <a class="btn" href="activity-input.html">活動を記録</a>
-      <a class="btn primary" href="opportunity.html">商談を新規</a>
+    <div class="rec-fields">
+      <div class="rf"><span class="l">レコードタイプ</span><span class="v">チェーン</span></div>
+      <div class="rf"><span class="l">主要チャネル</span><span class="v">直販</span></div>
+      <div class="rf"><span class="l">決済区分</span><span class="v">本社決済</span></div>
+      <div class="rf"><span class="l">施設数</span><span class="v">38（導入29）</span></div>
+      <div class="rf"><span class="l">年間売上</span><span class="v">¥96.5M</span></div>
+      <div class="rf"><span class="l">所有者</span><span class="v">三原</span></div>
     </div>
   </div>
 
-  <div class="grid g2" style="margin-bottom:16px">
-    <div class="card">
-      <div class="hd">チェーン基本情報</div>
-      <div class="bd">
-        <dl class="dl">
-          <dt><span class="req">★</span>チェーン名</dt><dd>グランビューホテルズ 株式会社</dd>
-          <dt>階層</dt><dd>チェーン運営会社（本社）</dd>
-          <dt>主要チャネル</dt><dd>直販</dd>
-          <dt>決済区分</dt><dd>本社決済</dd>
-          <dt>本社キーマン</dt><dd>購買本部長 田所様</dd>
-          <dt>エリア</dt><dd>全国（本社: 東京都）</dd>
-        </dl>
-      </div>
-    </div>
-    <div class="card">
-      <div class="hd">サマリ</div>
-      <div class="bd">
-        <div class="grid g2">
-          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">配下施設数</div><div class="val">38</div></div>
-          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">導入施設</div><div class="val">29<small>/38</small></div></div>
-          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">年間売上</div><div class="val">¥96.5<small>M</small></div></div>
-          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">浸透率</div><div class="val">76<small>%</small></div></div>
+  <!-- タブ -->
+  <div class="rec-tabs">
+    <a class="on" href="#related">関連</a>
+    <a href="#detail">詳細</a>
+    <a href="activities.html">活動</a>
+  </div>
+
+  <div class="rec-cols">
+    <!-- 左: 詳細 ＋ 関連リスト -->
+    <div>
+      <div class="detail-sec" id="detail">
+        <h3><span class="caret">▾</span> 取引先 情報</h3>
+        <div class="fgrid">
+          <div class="fitem"><div class="l"><span class="req">*</span>取引先名</div><div class="v">グランビューホテルズ 株式会社 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">親取引先</div><div class="v">—（最上位）<span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l"><span class="req">*</span>主要チャネル</div><div class="v">直販 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">決済区分</div><div class="v">本社決済 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">本社キーマン</div><div class="v">購買本部長 田所様 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">エリア（本社）</div><div class="v">東京都 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">浸透率</div><div class="v">76% <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">所有者</div><div class="v">三原 <span class="pencil">✎</span></div></div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="card" style="margin-bottom:16px">
-    <div class="hd">配下の個別施設（関連リスト）<span class="sub">チェーン⇄施設を行き来</span></div>
-    <div class="bd" style="padding:0">
-      <table class="tbl">
-        <thead><tr><th>施設名</th><th>顧客コード</th><th>都道府県</th><th>施設キーマン</th><th class="num">年間売上</th><th>状態</th></tr></thead>
-        <tbody>
-          <tr><td class="lk">グランビュー箱根</td><td class="muted">10231</td><td>神奈川県</td><td>支配人 林様</td><td class="num">¥6.2M</td><td><span class="pill green">導入済</span></td></tr>
-          <tr><td class="lk">グランビュー金沢</td><td class="muted">10288</td><td>石川県</td><td>支配人 西様</td><td class="num">¥4.1M</td><td><span class="pill green">導入済</span></td></tr>
-          <tr><td class="lk">グランビュー沖縄</td><td class="muted">10302</td><td>沖縄県</td><td>—</td><td class="num">¥0M</td><td><span class="pill amber">提案中</span></td></tr>
-          <tr><td class="lk muted">グランビュー仙台（新規開業）</td><td class="muted">—（採番待ち）</td><td>宮城県</td><td>—</td><td class="num">¥0M</td><td><span class="pill blue">開業案件</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="grid g2">
-    <div class="card">
-      <div class="hd">商談（関連リスト）</div>
-      <div class="bd" style="padding:0">
-        <table class="tbl">
-          <thead><tr><th>商談名</th><th class="num">年間見込</th><th>ステージ</th></tr></thead>
+      <!-- 関連: 施設 -->
+      <div class="related" id="related">
+        <div class="rl-hd"><span class="obj-icon o-acct">🏩</span> 施設 <span class="cnt">(38)</span><span class="sp"></span><a class="more" href="#">新規</a></div>
+        <table class="lvt" style="border:0;border-radius:0">
+          <thead><tr><th>施設名</th><th>顧客コード</th><th>都道府県</th><th class="num">年間売上</th><th>状態</th></tr></thead>
           <tbody>
-            <tr><td class="lk"><a href="opportunity.html">2026春 新規導入</a></td><td class="num">¥24.0M</td><td><span class="pill amber">内定</span></td></tr>
-            <tr><td class="lk muted">2025秋 什器更新</td><td class="num">¥12.0M</td><td><span class="pill gray">ロスト（価格）</span></td></tr>
+            <tr><td><a class="lk" href="facility-detail.html">グランビュー箱根</a></td><td>10231</td><td>神奈川県</td><td class="num">¥6.2M</td><td><span class="pill green">導入済</span></td></tr>
+            <tr><td><a class="lk" href="facility-detail.html">グランビュー金沢</a></td><td>10288</td><td>石川県</td><td class="num">¥4.1M</td><td><span class="pill green">導入済</span></td></tr>
+            <tr><td><a class="lk" href="facility-detail.html">グランビュー沖縄</a></td><td>10302</td><td>沖縄県</td><td class="num">¥0M</td><td><span class="pill amber">提案中</span></td></tr>
+            <tr><td><a class="lk" href="facility-detail.html">グランビュー仙台</a></td><td>採番待ち</td><td>宮城県</td><td class="num">¥0M</td><td><span class="pill blue">開業案件</span></td></tr>
           </tbody>
         </table>
+        <div class="foot"><a href="accounts.html">すべて表示</a></div>
       </div>
-    </div>
-    <div class="card">
-      <div class="hd">活動（直近）</div>
-      <div class="bd" style="padding:0">
-        <table class="tbl">
+
+      <!-- 関連: 商談 -->
+      <div class="related">
+        <div class="rl-hd"><span class="obj-icon o-opp">💼</span> 商談 <span class="cnt">(2)</span><span class="sp"></span><a class="more" href="opportunity.html">新規</a></div>
+        <table class="lvt" style="border:0;border-radius:0">
+          <thead><tr><th>商談名</th><th class="num">年間見込</th><th>ステージ</th><th>完了予定</th></tr></thead>
           <tbody>
-            <tr><td><span class="pill blue">訪問</span></td><td>6/2 本社購買と価格交渉</td><td class="muted">三原</td></tr>
-            <tr><td><span class="pill gray">TEL</span></td><td>5/27 内定条件の確認</td><td class="muted">三原</td></tr>
-            <tr><td><span class="pill amber">議事録</span></td><td>5/20 提案MTG（ベルセールス自動転記）</td><td class="muted">三原</td></tr>
+            <tr><td><a class="lk" href="opportunity.html">2026春 新規導入</a></td><td class="num">¥24.0M</td><td><span class="pill amber">内定</span></td><td>6/30</td></tr>
+            <tr><td><a class="lk" href="opportunity.html">什器入替提案</a></td><td class="num">¥6.8M</td><td><span class="pill blue">営業済</span></td><td>7/20</td></tr>
           </tbody>
         </table>
+        <div class="foot"><a href="opportunities.html">すべて表示</a></div>
+      </div>
+
+      <!-- 関連: 取引先責任者 -->
+      <div class="related">
+        <div class="rl-hd"><span class="obj-icon o-contact">👤</span> 取引先責任者 <span class="cnt">(3)</span><span class="sp"></span><a class="more" href="contacts.html">新規</a></div>
+        <table class="lvt" style="border:0;border-radius:0">
+          <thead><tr><th>氏名</th><th>役職</th><th>区分</th></tr></thead>
+          <tbody>
+            <tr><td><a class="lk" href="contact-record.html">田所 様</a></td><td>購買本部長</td><td><span class="pill blue">本社キーマン</span></td></tr>
+            <tr><td><a class="lk" href="contact-record.html">林 様</a></td><td>支配人（箱根）</td><td><span class="pill gray">施設キーマン</span></td></tr>
+          </tbody>
+        </table>
+        <div class="foot"><a href="contacts.html">すべて表示</a></div>
+      </div>
+    </div>
+
+    <!-- 右: 活動タイムライン -->
+    <div>
+      <div class="related act-panel">
+        <div class="rl-hd"><span class="obj-icon o-act">📋</span> 活動<span class="sp"></span><a class="more" href="activity-input.html">記録</a></div>
+        <div class="tl">
+          <div class="item"><span class="dot"></span><div class="when">6/2 ・ 訪問 ・ 三原</div><div class="body">本社購買と価格交渉</div></div>
+          <div class="item"><span class="dot"></span><div class="when">5/27 ・ TEL ・ 三原</div><div class="body">内定条件の確認</div></div>
+          <div class="item"><span class="dot"></span><div class="when">5/20 ・ 議事録 ・ 三原</div><div class="body">提案MTG（ベルセールス自動転記）</div></div>
+        </div>
+        <div class="foot"><a href="activities.html">すべて表示</a></div>
       </div>
     </div>
   </div>
 
-  <div class="demo-note" style="margin-top:16px">💡 本社キーマンと施設キーマンを分けて管理。本社決済/個店決済の区分も保持（ヒアリングB）。新規開業ホテルは「開業案件」として別管理（ヒアリングE）。</div>
+  <div class="demo-note" style="margin-top:14px">💡 標準のレコードページ構成（ハイライトパネル＋関連/詳細タブ＋関連リスト＋活動タイムライン）。本社キーマン/施設キーマンを分けて管理、施設は子レコード（ヒアリングB）。</div>
 
 </div>
 <script src="app.js"></script>

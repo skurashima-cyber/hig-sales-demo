@@ -3,50 +3,70 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>取引先（チェーン） | HIG 営業デモ</title>
+<title>取引先 | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="acct">
 <div class="wrap">
 
-  <div class="page-head">
-    <div class="icon">🏨</div>
-    <div>
-      <div class="eyebrow">取引先 › チェーン運営会社（TOP147）</div>
-      <h1>チェーン運営会社リスト</h1>
+  <!-- リストビュー ヘッダ -->
+  <div class="lv-head">
+    <span class="obj-icon o-acct lg">🏢</span>
+    <div class="meta">
+      <div class="kicker">取引先</div>
+      <div class="lv-title">チェーン運営会社（TOP147）<span class="caret">▾</span></div>
+      <div class="sub">147 件 • 並び替え基準: 年間売上 • 数秒前に更新済み</div>
     </div>
-    <div class="actions"><a class="btn primary" href="#">新規</a></div>
-  </div>
-
-  <div class="demo-note">⚠️ 顧客は<b>チェーン運営会社（本社）⇄個別施設の二層</b>。チェーンに属さない個店の施設もあり。両方を行き来して見られることがMUST（ヒアリングB）。</div>
-
-  <div class="toolbar">
-    <span class="chip on">全チェーン</span>
-    <span class="chip">本社決済</span><span class="chip">個店決済</span>
-    <span class="grow"></span>
-    <input class="field" style="width:240px;margin:0" placeholder="チェーン/施設を検索…">
-    <span class="muted">147件 ・ 並び替え: 年間売上 ▾</span>
-  </div>
-
-  <div class="card">
-    <div class="bd" style="padding:0">
-      <table class="tbl">
-        <thead>
-          <tr><th>チェーン運営会社</th><th class="num">施設数</th><th>主要チャネル</th><th>決済</th><th>担当</th><th class="num">年間売上</th><th>営業状況</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="lk"><a href="account-detail.html">グランビューホテルズ</a></td><td class="num">38</td><td>直販</td><td>本社決済</td><td>三原</td><td class="num">¥96.5M</td><td><span class="pill amber">内定</span></td></tr>
-          <tr><td class="lk"><a href="account-detail.html">都ホテルチェーン</a></td><td class="num">52</td><td>東京マツシマ</td><td>本社決済</td><td>櫻井</td><td class="num">¥78.0M</td><td><span class="pill blue">営業済</span></td></tr>
-          <tr><td class="lk"><a href="account-detail.html">サンリゾート</a></td><td class="num">21</td><td>JTB商事</td><td>個店決済</td><td>田村</td><td class="num">¥54.2M</td><td><span class="pill blue">情報収集済</span></td></tr>
-          <tr><td class="lk"><a href="account-detail.html">やまと温泉リゾート</a></td><td class="num">17</td><td>ニシカワヤ</td><td>本社決済</td><td>佐久間</td><td class="num">¥48.6M</td><td><span class="pill green">継続発注</span></td></tr>
-          <tr><td class="lk"><a href="account-detail.html">シーサイド観光</a></td><td class="num">12</td><td>直販</td><td>個店決済</td><td>三原</td><td class="num">¥31.0M</td><td><span class="pill blue">営業済</span></td></tr>
-          <tr><td class="lk muted"><a href="account-detail.html">（個店）金沢ベイホテル</a></td><td class="num">1</td><td>直販</td><td>個店決済</td><td>田村</td><td class="num">¥8.4M</td><td><span class="pill gray">情報未収集</span></td></tr>
-        </tbody>
-      </table>
+    <div class="acts">
+      <a class="btn" href="#">インポート</a>
+      <a class="btn primary" href="account-new.html">新規</a>
     </div>
   </div>
 
-  <div class="demo-note" style="margin-top:16px">💡 個別施設は一意の顧客コード（現状5桁・連番）で識別 → 出荷データとの突合キー。TOP147（本社）と出荷データ（施設）の対応表は現状60% → 一緒に整備していく（ヒアリングB）。</div>
+  <!-- リストビュー切替タブ -->
+  <div class="lv-tabs">
+    <a class="on" href="accounts.html">チェーン運営会社</a>
+    <a href="accounts.html">施設（全件）</a>
+    <a href="accounts.html">個店</a>
+    <a href="accounts.html">開業予定 施設</a>
+    <a href="mapping.html">未名寄せ 施設</a>
+  </div>
+
+  <div class="lv-toolbar">
+    <span class="count">147 件</span>
+    <span class="spring"></span>
+    <span class="search"><input placeholder="このリストを検索..."></span>
+    <span class="ic" title="絞り込み">⚙</span>
+    <span class="ic" title="表示">▤</span>
+    <span class="ic" title="更新">⟳</span>
+  </div>
+
+  <table class="lvt">
+    <thead>
+      <tr>
+        <th class="chk"><input type="checkbox"></th>
+        <th>取引先名 <span class="sortcaret">▲</span></th>
+        <th>レコードタイプ</th>
+        <th class="num">施設数</th>
+        <th>主要チャネル</th>
+        <th>決済区分</th>
+        <th>所有者</th>
+        <th class="num">年間売上</th>
+        <th>営業状況</th>
+        <th class="rowact"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="account-detail.html">グランビューホテルズ</a></td><td>チェーン</td><td class="num">38</td><td>直販</td><td>本社決済</td><td>三原</td><td class="num">¥96.5M</td><td><span class="pill amber">内定</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="account-detail.html">都ホテルチェーン</a></td><td>チェーン</td><td class="num">52</td><td>東京マツシマ</td><td>本社決済</td><td>櫻井</td><td class="num">¥78.0M</td><td><span class="pill blue">営業済</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="account-detail.html">サンリゾート</a></td><td>チェーン</td><td class="num">21</td><td>JTB商事</td><td>個店決済</td><td>田村</td><td class="num">¥54.2M</td><td><span class="pill blue">情報収集済</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="account-detail.html">やまと温泉リゾート</a></td><td>チェーン</td><td class="num">17</td><td>ニシカワヤ</td><td>本社決済</td><td>佐久間</td><td class="num">¥48.6M</td><td><span class="pill green">継続発注</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="account-detail.html">シーサイド観光</a></td><td>チェーン</td><td class="num">12</td><td>直販</td><td>個店決済</td><td>三原</td><td class="num">¥31.0M</td><td><span class="pill blue">営業済</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="facility-detail.html">金沢ベイホテル</a></td><td>施設（個店）</td><td class="num">—</td><td>直販</td><td>個店決済</td><td>田村</td><td class="num">¥8.4M</td><td><span class="pill gray">情報未収集</span></td><td class="rowact">▾</td></tr>
+    </tbody>
+  </table>
+
+  <div class="demo-note" style="margin-top:14px">💡 取引先は1オブジェクトを<b>レコードタイプ（チェーン / 施設）</b>で出し分け、親子（チェーン⇄施設）で二層管理。リストビューを切替えて チェーン/施設/個店/開業予定 を表示。名寄せ未完の施設は「未名寄せ施設」ビュー（→ <a href="mapping.html">対応表整備</a>）。</div>
 
 </div>
 <script src="app.js"></script>

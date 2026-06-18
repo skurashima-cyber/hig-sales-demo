@@ -3,64 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>商品（品番） | HIG 営業デモ</title>
+<title>商品 | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="prod">
 <div class="wrap">
 
-  <div class="page-head">
-    <div class="icon">📦</div>
-    <div>
-      <div class="eyebrow">商品（品番マスタ）</div>
-      <h1>商品マスタ</h1>
+  <div class="lv-head">
+    <span class="obj-icon o-prod lg">📦</span>
+    <div class="meta">
+      <div class="kicker">商品</div>
+      <div class="lv-title">すべての商品（品番）<span class="caret">▾</span></div>
+      <div class="sub">10 件 • 並び替え基準: 品番 • 数秒前に更新済み</div>
     </div>
-    <div class="actions"><a class="btn primary" href="#">新規</a></div>
+    <div class="acts"><a class="btn primary" href="#">新規</a></div>
   </div>
 
-  <div class="demo-note">⚠️ 品番（例: A95G）は全社で一意・移行/連携キーに使用可（ヒアリングC）。商品カテゴリーの正式マスタは無いが管理表あり → SFでマスタ化。</div>
-
-  <div class="toolbar">
-    <span class="chip on">すべて</span>
-    <span class="chip">全チャネル(A〇G)</span><span class="chip">マツシマPB(A〇M)</span><span class="chip">施設売店(A〇X)</span><span class="chip">セット(SG/SM/SJ)</span>
-    <span class="grow"></span><span class="muted">価格改定履歴をさかのぼれるとベター</span>
+  <div class="lv-tabs">
+    <a class="on" href="products.html">すべて</a>
+    <a href="products.html">全チャネル(A〇G)</a>
+    <a href="products.html">マツシマPB(A〇M)</a>
+    <a href="products.html">セット(SG/SM/SJ)</a>
+    <a href="products.html">取扱中のみ</a>
   </div>
 
-  <div class="card" style="margin-bottom:16px">
-    <div class="bd" style="padding:0">
-      <table class="tbl">
-        <thead><tr><th>品番</th><th>商品名</th><th>記号区分</th><th>ブランド</th><th class="num">標準単価(税抜)</th><th>状態</th></tr></thead>
-        <tbody>
-          <tr><td class="lk">A95G</td><td>スキンケアパウチ</td><td>全チャネル販売</td><td>DHC</td><td class="num">¥120</td><td><span class="pill green">取扱中</span></td></tr>
-          <tr><td class="lk">A88G</td><td>インバス用ボトル</td><td>全チャネル販売</td><td>DHC</td><td class="num">¥260</td><td><span class="pill green">取扱中</span></td></tr>
-          <tr><td class="lk">A12M</td><td>UV・リップ</td><td>東京マツシマPB</td><td>DHC</td><td class="num">¥180</td><td><span class="pill green">取扱中</span></td></tr>
-          <tr><td class="lk">A30X</td><td>売店用トラベルセット</td><td>施設売店・個人販売</td><td>DHC</td><td class="num">¥980</td><td><span class="pill green">取扱中</span></td></tr>
-          <tr><td class="lk">SG-07</td><td>アメニティセット（直販オリジナル）</td><td>全チャネルセット</td><td>DHC</td><td class="num">¥640</td><td><span class="pill green">取扱中</span></td></tr>
-          <tr><td class="lk">SM-03</td><td>マツシマ専用セット</td><td>東京マツシマ専用セット</td><td>DHC</td><td class="num">¥600</td><td><span class="pill green">取扱中</span></td></tr>
-          <tr><td class="lk">SJ-02</td><td>JTB商事専用セット</td><td>JTB商事専用セット</td><td>DHC</td><td class="num">¥580</td><td><span class="pill green">取扱中</span></td></tr>
-          <tr><td class="lk">B-220</td><td>アメニティ什器</td><td>資材関連</td><td>—</td><td class="num">¥4,800</td><td><span class="pill green">取扱中</span></td></tr>
-          <tr><td class="lk muted">C-118</td><td>商品パンフレット</td><td>パンフ・チラシ関連</td><td>—</td><td class="num">¥0</td><td><span class="pill gray">販促物</span></td></tr>
-          <tr><td class="lk muted">D-405</td><td>DHC一般品（仕入）</td><td>DHC一般品関連</td><td>DHC</td><td class="num">¥—</td><td><span class="pill green">取扱中</span></td></tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="lv-toolbar">
+    <span class="count">10 件</span><span class="spring"></span>
+    <span class="search"><input placeholder="このリストを検索..."></span>
+    <span class="ic">⚙</span><span class="ic">▤</span><span class="ic">⟳</span>
   </div>
 
-  <div class="card">
-    <div class="hd">品番 記号体系（ヒアリングC）</div>
-    <div class="bd" style="padding:0">
-      <table class="tbl">
-        <tbody>
-          <tr><td><b>A〇G</b></td><td>全チャネル販売商品</td><td><b>A〇M</b></td><td>東京マツシマPB商品</td></tr>
-          <tr><td><b>A〇X</b></td><td>施設売店売り・個人販売商品</td><td><b>B</b></td><td>資材関連</td></tr>
-          <tr><td><b>C</b></td><td>パンフレット・チラシ関連</td><td><b>D</b></td><td>DHC一般品商品関連</td></tr>
-          <tr><td><b>SG</b></td><td>全チャネルセット（直販オリジナル含む）</td><td><b>SM / SJ</b></td><td>マツシマ専用 / JTB商事専用セット</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+  <table class="lvt">
+    <thead>
+      <tr><th class="chk"><input type="checkbox"></th><th>品番 <span class="sortcaret">▲</span></th><th>商品名</th><th>記号区分</th><th>ブランド</th><th class="num">標準単価(税抜)</th><th>状態</th><th class="rowact"></th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="product-record.html">A95G</a></td><td>スキンケアパウチ</td><td>全チャネル販売</td><td>DHC</td><td class="num">¥120</td><td><span class="pill green">取扱中</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="product-record.html">A88G</a></td><td>インバス用ボトル</td><td>全チャネル販売</td><td>DHC</td><td class="num">¥260</td><td><span class="pill green">取扱中</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="product-record.html">A12M</a></td><td>UV・リップ</td><td>東京マツシマPB</td><td>DHC</td><td class="num">¥180</td><td><span class="pill green">取扱中</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="product-record.html">A30X</a></td><td>売店用トラベルセット</td><td>施設売店・個人</td><td>DHC</td><td class="num">¥980</td><td><span class="pill green">取扱中</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="product-record.html">SG-07</a></td><td>アメニティセット（直販OL）</td><td>全チャネルセット</td><td>DHC</td><td class="num">¥640</td><td><span class="pill green">取扱中</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="product-record.html">SM-03</a></td><td>マツシマ専用セット</td><td>マツシマ専用セット</td><td>DHC</td><td class="num">¥600</td><td><span class="pill green">取扱中</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="product-record.html">B-220</a></td><td>アメニティ什器</td><td>資材関連</td><td>—</td><td class="num">¥4,800</td><td><span class="pill green">取扱中</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="product-record.html">D-405</a></td><td>DHC一般品（仕入）</td><td>DHC一般品</td><td>DHC</td><td class="num">¥—</td><td><span class="pill green">取扱中</span></td><td class="rowact">▾</td></tr>
+    </tbody>
+  </table>
 
-  <div class="demo-note" style="margin-top:16px">💡 セット品と単品の親子関係は持たない（必要性なし／ヒアリングC）。価格改定（値上げ）はチェーンごとに匙加減 → 履歴を保持できるとベター。</div>
+  <div class="demo-note" style="margin-top:14px">💡 品番は全社で一意・移行/連携キー。記号体系: A〇G=全チャネル / A〇M=マツシマPB / A〇X=施設売店 / B=資材 / C=パンフ / D=DHC一般品 / SG・SM・SJ=セット（ヒアリングC）。</div>
 
 </div>
 <script src="app.js"></script>

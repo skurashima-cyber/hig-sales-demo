@@ -3,82 +3,123 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>商談 | HIG 営業デモ</title>
+<title>2026春 新規導入 | 商談 | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="opp">
 <div class="wrap">
 
-  <div class="page-head">
-    <div class="icon">💼</div>
-    <div>
-      <div class="eyebrow">商談（TOP147リストの置き換え）</div>
-      <h1>グランビューホテルズ_2026春 新規導入</h1>
-    </div>
-    <div class="actions"><a class="btn primary" href="#">次のステージへ</a></div>
-  </div>
-
-  <!-- 7ステージ -->
-  <div class="path" style="margin-bottom:16px">
-    <div class="st done">情報未収集</div>
-    <div class="st done">情報収集済</div>
-    <div class="st done">営業済</div>
-    <div class="st cur">内定</div>
-    <div class="st">受注</div>
-    <div class="st">継続発注</div>
-    <div class="st">（ロスト）</div>
-  </div>
-
-  <div class="grid g2" style="margin-bottom:16px">
-    <div class="card">
-      <div class="hd">基本</div>
-      <div class="bd">
-        <dl class="dl">
-          <dt><span class="req">★</span>チェーン</dt><dd><a href="account-detail.html">グランビューホテルズ</a></dd>
-          <dt>対象施設</dt><dd>本社一括（38施設へ展開）</dd>
-          <dt><span class="req">★</span>チャネル</dt><dd>直販</dd>
-          <dt><span class="req">★</span>商談名</dt><dd>2026春 新規導入</dd>
-          <dt><span class="req">★</span>ステージ</dt><dd>内定</dd>
-          <dt><span class="req">★</span>年間売上見込</dt><dd>¥24,000,000</dd>
-          <dt>確度</dt><dd>80%</dd>
-          <dt><span class="req">★</span>主担当</dt><dd>三原（同行: 櫻井）</dd>
-        </dl>
+  <div class="rec-head">
+    <div class="rec-top">
+      <span class="obj-icon o-opp lg">💼</span>
+      <div class="meta">
+        <div class="crumb"><a href="opportunities.html">商談</a></div>
+        <h1>グランビューホテルズ_2026春 新規導入</h1>
+      </div>
+      <div class="acts">
+        <a class="btn" href="activity-input.html">活動を記録</a>
+        <a class="btn" href="quote.html">見積</a>
+        <a class="btn primary" href="#">編集</a>
       </div>
     </div>
-    <div class="card">
-      <div class="hd">提案アイテム・進捗</div>
-      <div class="bd">
-        <dl class="dl">
-          <dt>提案品番</dt><dd>A95G / A88G / SG-07</dd>
-          <dt>ネクストアクション</dt><dd>本社決済の最終確認</dd>
-          <dt>期限</dt><dd>2026-06-20 <span class="pill red" style="margin-left:6px">期限間近</span></dd>
-          <dt>受注日</dt><dd class="muted">—（受注時に記録）</dd>
-          <dt>ロスト理由</dt><dd class="muted">—（ロスト時に記録）</dd>
-        </dl>
-        <hr class="sep">
-        <div class="section-title">ベルセールス連携（候補→承認）</div>
-        <table class="tbl">
-          <tr><td>ヒアリング充足度</td><td><span class="pill amber">68%</span> 競合条件が未確認</td></tr>
-          <tr><td>顧客の主要発言</td><td>「他チェーンの導入実績を見たい」<a href="#" style="margin-left:6px">承認</a></td></tr>
+    <div class="rec-fields">
+      <div class="rf"><span class="l">取引先</span><span class="v"><a href="account-detail.html">グランビューHD</a></span></div>
+      <div class="rf"><span class="l">チャネル</span><span class="v">直販</span></div>
+      <div class="rf"><span class="l">年間売上見込</span><span class="v">¥24.0M</span></div>
+      <div class="rf"><span class="l">確度</span><span class="v">80%</span></div>
+      <div class="rf"><span class="l">完了予定日</span><span class="v">2026-06-30</span></div>
+      <div class="rf"><span class="l">所有者</span><span class="v">三原（同行 櫻井）</span></div>
+    </div>
+  </div>
+
+  <!-- パス（7ステージ） -->
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+    <div class="path" style="flex:1">
+      <div class="st done">情報未収集</div>
+      <div class="st done">情報収集済</div>
+      <div class="st done">営業済</div>
+      <div class="st cur">内定</div>
+      <div class="st">受注</div>
+      <div class="st">継続発注</div>
+      <div class="st">ロスト</div>
+    </div>
+    <a class="btn primary" href="#">✓ 内定として完了</a>
+  </div>
+
+  <div class="rec-tabs">
+    <a class="on" href="#related">関連</a>
+    <a href="#detail">詳細</a>
+    <a href="activities.html">活動</a>
+  </div>
+
+  <div class="rec-cols">
+    <div>
+      <div class="detail-sec" id="detail">
+        <h3><span class="caret">▾</span> 商談 情報</h3>
+        <div class="fgrid">
+          <div class="fitem"><div class="l"><span class="req">*</span>商談名</div><div class="v">2026春 新規導入 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l"><span class="req">*</span>取引先</div><div class="v">グランビューHD <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l"><span class="req">*</span>チャネル</div><div class="v">直販 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l"><span class="req">*</span>ステージ</div><div class="v">内定 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l"><span class="req">*</span>年間売上見込</div><div class="v">¥24,000,000 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">確度</div><div class="v">80%（ステージ連動）<span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">ネクストアクション</div><div class="v">本社決済の最終確認 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">期限</div><div class="v">2026-06-20 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">主担当 / 同行</div><div class="v">三原 / 櫻井 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">ロスト理由</div><div class="v">—（ロスト時に必須）<span class="pencil">✎</span></div></div>
+        </div>
+      </div>
+
+      <!-- 商談商品（提案アイテム） -->
+      <div class="related" id="related">
+        <div class="rl-hd"><span class="obj-icon o-prod">📦</span> 商談商品（提案アイテム）<span class="cnt">(4)</span><span class="sp"></span><a class="more" href="quote.html">商品を追加</a></div>
+        <table class="lvt" style="border:0;border-radius:0">
+          <thead><tr><th>品番</th><th>商品</th><th class="num">提案単価</th><th class="num">年間数量</th><th class="num">年間金額</th></tr></thead>
+          <tbody>
+            <tr><td><a class="lk" href="product-record.html">A95G</a></td><td>スキンケアパウチ</td><td class="num">¥110</td><td class="num">96,000</td><td class="num">¥10.6M</td></tr>
+            <tr><td><a class="lk" href="product-record.html">A88G</a></td><td>インバス用ボトル</td><td class="num">¥245</td><td class="num">28,000</td><td class="num">¥6.9M</td></tr>
+            <tr><td><a class="lk" href="product-record.html">SG-07</a></td><td>アメニティセット</td><td class="num">¥600</td><td class="num">9,000</td><td class="num">¥5.4M</td></tr>
+          </tbody>
+        </table>
+        <div class="foot"><a href="quote.html">見積を開く</a></div>
+      </div>
+
+      <!-- 承認履歴 -->
+      <div class="related">
+        <div class="rl-hd"><span class="obj-icon" style="background:#9aa5b1">✅</span> 承認履歴 <span class="cnt">(1)</span><span class="sp"></span><a class="more" href="approval.html">承認申請</a></div>
+        <table class="lvt" style="border:0;border-radius:0">
+          <thead><tr><th>区分</th><th>内容</th><th>状態</th><th>承認者</th></tr></thead>
+          <tbody>
+            <tr><td>値引率</td><td>6.5%（基準超）</td><td><span class="pill amber">承認待ち</span></td><td>営業課長</td></tr>
+          </tbody>
         </table>
       </div>
     </div>
-  </div>
 
-  <div class="card">
-    <div class="hd">活動（訪問・TEL・議事録）<span class="sub"><a href="activity-input.html">活動を記録</a></span></div>
-    <div class="bd" style="padding:0">
-      <table class="tbl">
-        <tbody>
-          <tr><td><span class="pill blue">訪問</span></td><td>6/2 本社購買と価格交渉。年間ボリューム前提で調整 <span class="pill green" style="margin-left:6px">ベルセールス自動</span></td><td class="muted">三原</td></tr>
-          <tr><td><span class="pill gray">TEL</span></td><td>5/27 内定条件の確認</td><td class="muted">三原</td></tr>
-          <tr><td><span class="pill amber">議事録</span></td><td>5/20 提案MTG（録音→当日アップ→自動転記）</td><td class="muted">三原</td></tr>
-        </tbody>
-      </table>
+    <div>
+      <div class="related act-panel">
+        <div class="rl-hd"><span class="obj-icon o-act">📋</span> 活動<span class="sp"></span><a class="more" href="activity-input.html">記録</a></div>
+        <div class="tl">
+          <div class="item"><span class="dot"></span><div class="when">6/2 ・ 訪問 ・ 三原</div><div class="body">価格交渉。先方が予算上限を提示 <span class="pill green">ベルセールス自動</span></div></div>
+          <div class="item"><span class="dot"></span><div class="when">5/27 ・ TEL ・ 三原</div><div class="body">内定条件の確認</div></div>
+          <div class="item"><span class="dot"></span><div class="when">5/20 ・ 議事録 ・ 三原</div><div class="body">2026春提案を提示</div></div>
+        </div>
+        <div class="foot"><a href="belsales.html">ベルセールス議事録</a></div>
+      </div>
+
+      <div class="related">
+        <div class="rl-hd"><span class="obj-icon" style="background:#b07cd6">🤖</span> ベルセールス（候補→承認）</div>
+        <div class="bd" style="padding:12px 14px">
+          <table class="tbl">
+            <tr><td>ヒアリング充足度</td><td><span class="pill amber">68%</span></td></tr>
+            <tr><td>顧客の主要発言</td><td>「他チェーンの実績を見たい」</td></tr>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="demo-note" style="margin-top:16px">💡 ステージ（ヒアリングD）: 情報未収集→情報収集済→営業済→内定→受注→継続発注→ロスト。商談単位は<b>各案件毎</b>（1社に複数商談を並走させない）。見込＝年間売上見込＋確度%。担当は複数OK（主担当/同行）。</div>
+  <div class="demo-note" style="margin-top:14px">💡 商談レコードページ＝パス（7ステージ）＋詳細＋関連リスト（商談商品/承認/活動）。見込＝年間売上見込＋確度。提案アイテム＝品番。ロスト時はロスト理由が必須（ヒアリングD/E）。</div>
 
 </div>
 <script src="app.js"></script>

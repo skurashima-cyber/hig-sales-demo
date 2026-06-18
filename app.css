@@ -132,3 +132,105 @@ table.tbl{width:100%;border-collapse:collapse;font-size:12.5px}
 hr.sep{border:0;border-top:1px solid var(--line);margin:16px 0}
 .legend{display:flex;gap:14px;font-size:11px;color:var(--sub);margin-top:8px}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+
+/* ============================================================
+   Salesforce Lightning 風 — オブジェクト リストビュー / レコード詳細
+   ============================================================ */
+
+/* オブジェクトアイコン（角丸の色付きタイル＋グリフ） */
+.obj-icon{width:32px;height:32px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;
+  color:#fff;font-size:16px;flex:0 0 auto}
+.obj-icon.lg{width:42px;height:42px;border-radius:8px;font-size:22px}
+.o-acct{background:#7d2fc7}     /* 取引先 */
+.o-contact{background:#5867e8}  /* 取引先責任者 */
+.o-opp{background:#fcb95b;color:#5a3b00}/* 商談 */
+.o-prod{background:#44a08d}     /* 商品 */
+.o-sample{background:#e07c3e}   /* サンプル(custom) */
+.o-act{background:#6b9e78}      /* 活動 */
+.o-dash{background:#e8638a}     /* ダッシュボード */
+
+/* ---- リストビュー ---- */
+.lv-head{display:flex;align-items:flex-start;gap:12px;padding:12px 0 10px}
+.lv-head .meta{flex:1;min-width:0}
+.lv-head .kicker{color:var(--sub);font-size:11px}
+.lv-title{display:flex;align-items:center;gap:6px;font-size:18px;font-weight:700;margin-top:1px}
+.lv-title .caret{font-size:12px;color:var(--sub)}
+.lv-head .sub{color:var(--muted);font-size:12px;margin-top:2px}
+.lv-head .acts{display:flex;gap:8px;align-items:center}
+
+.lv-toolbar{display:flex;align-items:center;gap:10px;border:1px solid var(--line-d);border-bottom:0;
+  background:#fff;border-radius:8px 8px 0 0;padding:8px 12px}
+.lv-toolbar .count{color:var(--sub);font-size:12px}
+.lv-toolbar .spring{flex:1}
+.lv-toolbar .search{max-width:240px;flex:1}
+.lv-toolbar .search input{width:100%;border:1px solid var(--line-d);border-radius:5px;padding:6px 10px;font-size:12.5px}
+.lv-toolbar .ic{width:30px;height:30px;border:1px solid var(--line-d);border-radius:5px;display:inline-flex;
+  align-items:center;justify-content:center;color:var(--sub);background:#fff;font-size:13px}
+.lv-tabs{display:flex;gap:0;border-bottom:1px solid var(--line-d);margin-bottom:0}
+.lv-tabs a{padding:7px 14px;font-size:12.5px;color:var(--sub);border-bottom:2px solid transparent;font-weight:600}
+.lv-tabs a.on{color:var(--blue);border-bottom-color:var(--blue)}
+
+/* リストビュー表（チェック列＋行アクション） */
+table.lvt{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff;
+  border:1px solid var(--line-d);border-radius:0 0 8px 8px;overflow:hidden}
+.lvt th{text-align:left;color:var(--sub);font-weight:600;padding:8px 12px;border-bottom:1px solid var(--line-d);
+  background:#fafafa;white-space:nowrap;font-size:11.5px}
+.lvt th .sortcaret{color:var(--muted);font-size:9px;margin-left:3px}
+.lvt td{padding:8px 12px;border-bottom:1px solid var(--line)}
+.lvt tbody tr:hover{background:#f3f9ff}
+.lvt .chk{width:34px;text-align:center;color:var(--muted)}
+.lvt .rowact{width:34px;text-align:center;color:var(--blue);cursor:pointer}
+.lvt td.num,.lvt th.num{text-align:right;font-variant-numeric:tabular-nums}
+.lvt .lk{color:var(--blue);font-weight:600}
+
+/* ---- レコード（詳細）ページ ---- */
+.rec-head{background:#fff;border:1px solid var(--line-d);border-radius:8px;padding:12px 16px;margin-bottom:14px;box-shadow:var(--shadow)}
+.rec-top{display:flex;align-items:flex-start;gap:12px}
+.rec-top .meta{flex:1;min-width:0}
+.rec-top .crumb{color:var(--sub);font-size:11px}
+.rec-top h1{font-size:19px;font-weight:700;margin:1px 0 0}
+.rec-top .acts{display:flex;gap:8px;align-items:center}
+.rec-fields{display:flex;flex-wrap:wrap;gap:24px;margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+.rec-fields .rf{font-size:12px}
+.rec-fields .rf .l{color:var(--sub);display:block;font-size:11px}
+.rec-fields .rf .v{font-weight:700;font-size:13px}
+
+/* レコードタブ */
+.rec-tabs{display:flex;gap:0;border-bottom:1px solid var(--line-d);margin-bottom:14px}
+.rec-tabs a{padding:9px 16px;font-size:13px;color:var(--sub);border-bottom:2px solid transparent;font-weight:600}
+.rec-tabs a.on{color:var(--blue);border-bottom-color:var(--blue)}
+
+/* 2カラム（左:詳細/関連、右:活動） */
+.rec-cols{display:grid;grid-template-columns:1.9fr 1fr;gap:14px;align-items:start}
+@media(max-width:900px){.rec-cols{grid-template-columns:1fr}}
+
+/* 詳細フィールドセクション */
+.detail-sec{background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);margin-bottom:14px}
+.detail-sec>h3{font-size:13px;font-weight:700;padding:10px 16px;border-bottom:1px solid var(--line);margin:0;
+  display:flex;align-items:center;gap:6px}
+.detail-sec>h3 .caret{color:var(--sub);font-size:10px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:2px 28px;padding:12px 16px}
+@media(max-width:640px){.fgrid{grid-template-columns:1fr}}
+.fitem{padding:7px 0;border-bottom:1px solid #f4f4f4}
+.fitem .l{color:var(--sub);font-size:11px;display:flex;align-items:center;gap:5px}
+.fitem .l .req{color:var(--red)}
+.fitem .v{font-size:13px;font-weight:600;margin-top:2px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.fitem .v .pencil{color:var(--muted);opacity:0;font-size:11px}
+.fitem:hover .v .pencil{opacity:1}
+
+/* 関連リスト（カード） */
+.related{background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);margin-bottom:14px}
+.related>.rl-hd{display:flex;align-items:center;gap:8px;padding:9px 14px;border-bottom:1px solid var(--line);font-weight:700;font-size:13px}
+.related>.rl-hd .cnt{color:var(--sub);font-weight:600}
+.related>.rl-hd .sp{flex:1}
+.related>.rl-hd .more{font-size:12px;font-weight:600}
+.related .foot{padding:8px 14px;border-top:1px solid var(--line);text-align:center}
+.related .foot a{font-size:12px;font-weight:600}
+
+/* 活動パネル（右サイド） */
+.act-panel .tl{position:relative;padding:10px 14px}
+.act-panel .tl .item{position:relative;padding:0 0 14px 22px;border-left:2px solid var(--line);margin-left:6px}
+.act-panel .tl .item:last-child{border-left-color:transparent}
+.act-panel .tl .item .dot{position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--blue)}
+.act-panel .tl .item .when{color:var(--muted);font-size:11px}
+.act-panel .tl .item .body{font-size:12.5px;margin-top:1px}

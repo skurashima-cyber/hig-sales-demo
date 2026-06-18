@@ -3,52 +3,51 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>商談一覧 | HIG 営業デモ</title>
+<title>商談 | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="opp">
 <div class="wrap">
 
-  <div class="page-head">
-    <div class="icon">💼</div>
-    <div>
-      <div class="eyebrow">商談 › 一覧（自分の担当）</div>
-      <h1>商談一覧</h1>
+  <div class="lv-head">
+    <span class="obj-icon o-opp lg">💼</span>
+    <div class="meta">
+      <div class="kicker">商談</div>
+      <div class="lv-title">自分の商談<span class="caret">▾</span></div>
+      <div class="sub">18 件 • 並び替え基準: 完了予定日 • 数秒前に更新済み</div>
     </div>
-    <div class="actions"><a class="btn primary" href="opportunity.html">商談を新規</a></div>
+    <div class="acts"><a class="btn primary" href="opportunity.html">新規</a></div>
   </div>
 
-  <div class="toolbar">
-    <span class="chip on">自分の担当</span><span class="chip">チーム全体</span><span class="chip">今四半期</span>
-    <span class="grow"></span>
-    <span class="muted">ステージで絞り込み:</span>
-    <span class="chip">情報収集済</span><span class="chip on">営業済</span><span class="chip">内定</span><span class="chip">受注</span>
+  <div class="lv-tabs">
+    <a class="on" href="opportunities.html">自分の商談</a>
+    <a href="opportunities.html">今四半期クローズ</a>
+    <a href="opening-projects.html">開業案件</a>
+    <a href="lost.html">ロスト</a>
+    <a href="opportunities.html">滞留（14日超）</a>
   </div>
 
-  <div class="grid g4" style="margin-bottom:16px">
-    <div class="kpi"><div class="label">進行中 商談</div><div class="val">18<small>件</small></div></div>
-    <div class="kpi"><div class="label">年間見込 合計</div><div class="val">¥96<small>M</small></div><div class="delta up">▲ 確度加重 ¥61M</div></div>
-    <div class="kpi"><div class="label">今月クローズ予定</div><div class="val">5<small>件</small></div></div>
-    <div class="kpi"><div class="label">滞留（14日超）</div><div class="val" style="color:var(--red)">3<small>件</small></div></div>
+  <div class="lv-toolbar">
+    <span class="count">18 件 • ¥96M（確度加重 ¥61M）</span><span class="spring"></span>
+    <span class="search"><input placeholder="このリストを検索..."></span>
+    <span class="ic">⚙</span><span class="ic" title="ボード表示">▦</span><span class="ic">⟳</span>
   </div>
 
-  <div class="card">
-    <div class="bd" style="padding:0">
-      <table class="tbl">
-        <thead><tr><th>商談名</th><th>チェーン</th><th>チャネル</th><th class="num">年間見込</th><th class="num">確度</th><th>ステージ</th><th>次アクション</th><th class="num">滞留</th></tr></thead>
-        <tbody>
-          <tr><td class="lk"><a href="opportunity.html">2026春 新規導入</a></td><td>グランビューHD</td><td>直販</td><td class="num">¥24.0M</td><td class="num">80%</td><td><span class="pill amber">内定</span></td><td>本社決済 最終確認</td><td class="num">18日</td></tr>
-          <tr><td class="lk"><a href="opportunity.html">PB改定提案</a></td><td>都ホテルチェーン</td><td>東京マツシマ</td><td class="num">¥18.5M</td><td class="num">50%</td><td><span class="pill blue">営業済</span></td><td>見積条件すり合わせ</td><td class="num">6日</td></tr>
-          <tr><td class="lk"><a href="opportunity.html">開業案件_沖縄</a></td><td>サンリゾート</td><td>JTB商事</td><td class="num">¥9.2M</td><td class="num">30%</td><td><span class="pill blue">情報収集済</span></td><td>サンプル追客</td><td class="num">2日</td></tr>
-          <tr><td class="lk"><a href="opportunity.html">什器入替提案</a></td><td>グランビューHD</td><td>直販</td><td class="num">¥6.8M</td><td class="num">40%</td><td><span class="pill blue">営業済</span></td><td>提案資料の提示</td><td class="num">9日</td></tr>
-          <tr><td class="lk"><a href="opportunity.html">UV・リップ拡販</a></td><td>都ホテルチェーン</td><td>東京マツシマ</td><td class="num">¥3.2M</td><td class="num">60%</td><td><span class="pill amber">内定</span></td><td>発注書の受領</td><td class="num">1日</td></tr>
-          <tr><td class="lk"><a href="opportunity.html">温浴深耕</a></td><td>やまと温泉</td><td>ニシカワヤ</td><td class="num">¥6.8M</td><td class="num">90%</td><td><span class="pill green">継続発注</span></td><td>定期フォロー</td><td class="num">—</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+  <table class="lvt">
+    <thead>
+      <tr><th class="chk"><input type="checkbox"></th><th>商談名 <span class="sortcaret">▲</span></th><th>取引先</th><th>チャネル</th><th class="num">年間見込</th><th class="num">確度</th><th>ステージ</th><th>完了予定</th><th>所有者</th><th class="rowact"></th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="opportunity.html">2026春 新規導入</a></td><td>グランビューHD</td><td>直販</td><td class="num">¥24.0M</td><td class="num">80%</td><td><span class="pill amber">内定</span></td><td>6/30</td><td>三原</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="opportunity.html">PB改定提案</a></td><td>都ホテルチェーン</td><td>東京マツシマ</td><td class="num">¥18.5M</td><td class="num">50%</td><td><span class="pill blue">営業済</span></td><td>7/10</td><td>櫻井</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="opportunity.html">開業案件_沖縄</a></td><td>サンリゾート</td><td>JTB商事</td><td class="num">¥9.2M</td><td class="num">30%</td><td><span class="pill blue">情報収集済</span></td><td>8/31</td><td>田村</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="opportunity.html">什器入替提案</a></td><td>グランビューHD</td><td>直販</td><td class="num">¥6.8M</td><td class="num">40%</td><td><span class="pill blue">営業済</span></td><td>7/20</td><td>三原</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="opportunity.html">UV・リップ拡販</a></td><td>都ホテルチェーン</td><td>東京マツシマ</td><td class="num">¥3.2M</td><td class="num">60%</td><td><span class="pill amber">内定</span></td><td>6/25</td><td>櫻井</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="opportunity.html">温浴深耕</a></td><td>やまと温泉</td><td>ニシカワヤ</td><td class="num">¥6.8M</td><td class="num">90%</td><td><span class="pill green">継続発注</span></td><td>—</td><td>佐久間</td><td class="rowact">▾</td></tr>
+    </tbody>
+  </table>
 
-  <div class="demo-note" style="margin-top:16px">💡 TOP147リスト（Excel）の置き換え。リストビューで担当/ステージ/チャネルを絞り込み。インライン編集でステージ更新も可。商談単位は各案件毎（並走させない／ヒアリングD）。</div>
+  <div class="demo-note" style="margin-top:14px">💡 TOP147リスト（Excel）の置き換え。リストビューで 自分/今四半期/開業案件/ロスト/滞留 を切替。開業案件・ロストはレコードタイプ/ステージで絞るビュー。商談単位は各案件毎（ヒアリングD）。</div>
 
 </div>
 <script src="app.js"></script>

@@ -3,63 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>活動一覧・タイムライン | HIG 営業デモ</title>
+<title>活動 | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="act">
 <div class="wrap">
 
-  <div class="page-head">
-    <div class="icon">🗂️</div>
-    <div>
-      <div class="eyebrow">活動 › 一覧・タイムライン</div>
-      <h1>活動一覧・タイムライン</h1>
+  <div class="lv-head">
+    <span class="obj-icon o-act lg">📋</span>
+    <div class="meta">
+      <div class="kicker">活動（ToDo・行動）</div>
+      <div class="lv-title">自分の活動<span class="caret">▾</span></div>
+      <div class="sub">今週 31 件 • 並び替え基準: 日付 • 数秒前に更新済み</div>
     </div>
-    <div class="actions"><a class="btn primary" href="activity-input.html">活動を記録</a></div>
-  </div>
-
-  <div class="toolbar">
-    <span class="chip on">自分</span><span class="chip">チーム</span>
-    <span class="grow"></span>
-    <span class="chip on">訪問</span><span class="chip">TEL</span><span class="chip">メール</span><span class="chip">DM</span><span class="chip">展示会</span><span class="chip">議事録</span>
-  </div>
-
-  <div class="grid g4" style="margin-bottom:16px">
-    <div class="kpi"><div class="label">今週 活動</div><div class="val">31<small>件</small></div></div>
-    <div class="kpi"><div class="label">訪問</div><div class="val">8<small>件</small></div></div>
-    <div class="kpi"><div class="label">TEL</div><div class="val">18<small>件</small></div></div>
-    <div class="kpi"><div class="label">議事録(自動)</div><div class="val">5<small>件</small></div><div class="delta up">▲ ベルセールス</div></div>
-  </div>
-
-  <div class="grid g2">
-    <div class="card">
-      <div class="hd">タイムライン（時系列）</div>
-      <div class="bd" style="padding:0">
-        <table class="tbl">
-          <tbody>
-            <tr><td class="muted">6/18 16:20</td><td><span class="pill amber">議事録</span></td><td>グランビューHD 価格交渉（自動転記）</td><td class="muted">三原</td></tr>
-            <tr><td class="muted">6/18 11:00</td><td><span class="pill blue">訪問</span></td><td>都ホテル京都 PB改定提案</td><td class="muted">櫻井</td></tr>
-            <tr><td class="muted">6/17 15:30</td><td><span class="pill gray">TEL</span></td><td>サンR沖縄 サンプル追客</td><td class="muted">田村</td></tr>
-            <tr><td class="muted">6/17 10:00</td><td><span class="pill gray">メール</span></td><td>やまと温泉 見積送付</td><td class="muted">佐久間</td></tr>
-            <tr><td class="muted">6/16 14:00</td><td><span class="pill blue">展示会</span></td><td>ホテルショー フォロー名刺12件</td><td class="muted">三原</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="card">
-      <div class="hd">活動種別 構成（当月）</div>
-      <div class="bd">
-        <div class="bar"><span class="name">訪問</span><span class="track"><span class="fill" style="width:60%"></span></span><span class="v">34件</span></div>
-        <div class="bar"><span class="name">TEL</span><span class="track"><span class="fill p" style="width:90%"></span></span><span class="v">72件</span></div>
-        <div class="bar"><span class="name">メール</span><span class="track"><span class="fill g" style="width:45%"></span></span><span class="v">38件</span></div>
-        <div class="bar"><span class="name">展示会/セミナー</span><span class="track"><span class="fill a" style="width:18%"></span></span><span class="v">9件</span></div>
-        <div class="bar"><span class="name">議事録(自動)</span><span class="track"><span class="fill" style="width:30%"></span></span><span class="v">22件</span></div>
-        <p class="help">訪問・TELはマスト記録。DMはフェーズ1で行うか未定（ヒアリングH）。</p>
-      </div>
+    <div class="acts">
+      <a class="btn" href="belsales.html">ベルセールス議事録</a>
+      <a class="btn primary" href="activity-input.html">活動を記録</a>
     </div>
   </div>
 
-  <div class="demo-note" style="margin-top:16px">💡 議事録（Outlook由来）はSFへ移行希望。ベルセールス連携で訪問・TELの内容が自動でタイムラインに乗る（範囲は全て・当日/翌日）。</div>
+  <div class="lv-tabs">
+    <a class="on" href="activities.html">自分の活動</a>
+    <a href="todos.html">ToDo・期限切れ</a>
+    <a href="activities.html">訪問・TEL</a>
+    <a href="belsales.html">議事録（自動）</a>
+    <a href="activities.html">展示会・セミナー</a>
+  </div>
+
+  <div class="lv-toolbar">
+    <span class="count">31 件</span><span class="spring"></span>
+    <span class="search"><input placeholder="このリストを検索..."></span>
+    <span class="ic">⚙</span><span class="ic">▤</span><span class="ic">⟳</span>
+  </div>
+
+  <table class="lvt">
+    <thead>
+      <tr><th class="chk"><input type="checkbox"></th><th>日時 <span class="sortcaret">▼</span></th><th>種別</th><th>件名</th><th>関連先</th><th>フォロー区分</th><th>所有者</th><th class="rowact"></th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><input type="checkbox"></td><td>6/18 16:20</td><td><span class="pill amber">議事録</span></td><td>グランビューHD 価格交渉（自動転記）</td><td><a href="opportunity.html">2026春 新規導入</a></td><td>既存フォロー</td><td>三原</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td>6/18 11:00</td><td><span class="pill blue">訪問</span></td><td>都ホテル京都 PB改定提案</td><td><a href="opportunity.html">PB改定提案</a></td><td>既存フォロー</td><td>櫻井</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td>6/17 15:30</td><td><span class="pill gray">TEL</span></td><td>サンR沖縄 サンプル追客</td><td><a href="sample-record.html">SMP-20455</a></td><td>見込フォロー</td><td>田村</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td>6/17 10:00</td><td><span class="pill gray">メール</span></td><td>やまと温泉 見積送付</td><td><a href="opportunity.html">温浴深耕</a></td><td>既存フォロー</td><td>佐久間</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td>6/16 14:00</td><td><span class="pill blue">展示会</span></td><td>ホテルショー フォロー名刺12件</td><td>—</td><td>新規</td><td>三原</td><td class="rowact">▾</td></tr>
+    </tbody>
+  </table>
+
+  <div class="demo-note" style="margin-top:14px">💡 活動（ToDo/行動）のリストビュー。訪問・TELはマスト、DMは未定。議事録はベルセールスから自動転記。各レコードページの活動タイムラインにも反映（ヒアリングH）。</div>
 
 </div>
 <script src="app.js"></script>

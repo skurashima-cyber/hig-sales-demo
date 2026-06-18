@@ -3,51 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>サンプル管理 | HIG 営業デモ</title>
+<title>サンプル | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="sample">
 <div class="wrap">
 
-  <div class="page-head">
-    <div class="icon">🧴</div>
-    <div>
-      <div class="eyebrow">サンプル管理（Excel統合）</div>
-      <h1>サンプル送付・追客・転換</h1>
+  <div class="lv-head">
+    <span class="obj-icon o-sample lg">🧴</span>
+    <div class="meta">
+      <div class="kicker">サンプル <span class="pill gray" style="margin-left:4px">カスタムオブジェクト</span></div>
+      <div class="lv-title">追客中のサンプル<span class="caret">▾</span></div>
+      <div class="sub">24 件 • 並び替え基準: 追客予定日 • 数秒前に更新済み</div>
     </div>
-    <div class="actions"><a class="btn primary" href="#">サンプル送付を登録</a></div>
+    <div class="acts"><a class="btn primary" href="sample-record.html">新規</a></div>
   </div>
 
-  <div class="demo-note">⚠️ 現状は複数Excel（入力帳／代理店別出荷一覧／原価表）で管理 → <b>1つに統合</b>（ヒアリングF）。登録は営業or営業事務、<b>10営業日後に追客</b>、その後「転換」を判定。</div>
-
-  <div class="toolbar">
-    <span class="chip on">すべて</span><span class="chip">未追客</span><span class="chip">追客中</span><span class="chip">転換</span><span class="chip">追客遅延</span>
-    <span class="grow"></span><span class="muted">送付後 10営業日 未追客でアラート</span>
+  <div class="lv-tabs">
+    <a href="sample-follow.html">すべて</a>
+    <a href="sample-follow.html">未追客</a>
+    <a class="on" href="sample-follow.html">追客中</a>
+    <a href="sample-follow.html">転換</a>
+    <a href="sample-follow.html">追客遅延（10営業日超）</a>
   </div>
 
-  <div class="grid g4" style="margin-bottom:16px">
-    <div class="kpi"><div class="label">送付中</div><div class="val">14<small>件</small></div></div>
-    <div class="kpi"><div class="label">追客中</div><div class="val">6<small>件</small></div></div>
-    <div class="kpi"><div class="label">転換</div><div class="val">4<small>件</small></div><div class="delta up">▲ 転換率 29%</div></div>
-    <div class="kpi"><div class="label">追客遅延（10営業日超）</div><div class="val" style="color:var(--red)">2<small>件</small></div><div class="delta down">▼ 要対応</div></div>
+  <div class="lv-toolbar">
+    <span class="count">24 件 • 転換率 29%</span><span class="spring"></span>
+    <span class="search"><input placeholder="このリストを検索..."></span>
+    <span class="ic">⚙</span><span class="ic">▤</span><span class="ic">⟳</span>
   </div>
 
-  <div class="card">
-    <div class="bd" style="padding:0">
-      <table class="tbl">
-        <thead><tr><th>送付先（施設）</th><th>チェーン</th><th>サンプル品番</th><th>登録者</th><th>送付日</th><th>追客予定</th><th>状況</th></tr></thead>
-        <tbody>
-          <tr><td class="lk">サンリゾート 沖縄</td><td>サンリゾート</td><td>A95G</td><td>営業事務</td><td>5/29</td><td>6/12</td><td><span class="pill red">追客遅延</span></td></tr>
-          <tr><td class="lk">やまと温泉 草津</td><td>やまと温泉</td><td>A88G</td><td>櫻井</td><td>6/9</td><td>6/23</td><td><span class="pill amber">追客中</span></td></tr>
-          <tr><td class="lk">グランビュー箱根</td><td>グランビューHD</td><td>SG-07</td><td>三原</td><td>6/2</td><td>6/16</td><td><span class="pill green">転換</span></td></tr>
-          <tr><td class="lk">都ホテル 京都</td><td>都ホテルチェーン</td><td>A12M</td><td>営業事務</td><td>6/12</td><td>6/26</td><td><span class="pill gray">未追客</span></td></tr>
-          <tr><td class="lk">シーサイド熱海</td><td>シーサイド観光</td><td>A30X</td><td>田村</td><td>6/15</td><td>6/29</td><td><span class="pill amber">追客中</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+  <table class="lvt">
+    <thead>
+      <tr><th class="chk"><input type="checkbox"></th><th>送付先（施設）<span class="sortcaret">▲</span></th><th>チェーン</th><th>サンプル品番</th><th>登録者</th><th>送付日</th><th>追客予定</th><th>状況</th><th class="rowact"></th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="sample-record.html">サンリゾート 沖縄</a></td><td>サンリゾート</td><td>A95G</td><td>営業事務</td><td>5/29</td><td>6/12</td><td><span class="pill red">追客遅延</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="sample-record.html">やまと温泉 草津</a></td><td>やまと温泉</td><td>A88G</td><td>櫻井</td><td>6/9</td><td>6/23</td><td><span class="pill amber">追客中</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="sample-record.html">グランビュー箱根</a></td><td>グランビューHD</td><td>SG-07</td><td>三原</td><td>6/2</td><td>6/16</td><td><span class="pill green">転換</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="sample-record.html">都ホテル 京都</a></td><td>都ホテルチェーン</td><td>A12M</td><td>営業事務</td><td>6/12</td><td>6/26</td><td><span class="pill gray">未追客</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="sample-record.html">シーサイド熱海</a></td><td>シーサイド観光</td><td>A30X</td><td>田村</td><td>6/15</td><td>6/29</td><td><span class="pill amber">追客中</span></td><td class="rowact">▾</td></tr>
+    </tbody>
+  </table>
 
-  <div class="demo-note" style="margin-top:16px">💡 サンプル代（原価）はExcelの原価表を統合し、作業短縮のため自動計算したい（ヒアリングF）。什器の貸出・在庫管理は対象外。</div>
+  <div class="demo-note" style="margin-top:14px">💡 複数Excel（入力帳/代理店別出荷一覧/原価表）を統合したカスタムオブジェクト。登録は営業/営業事務、送付後10営業日で追客予定→アラート。原価は品番マスタから自動計算（ヒアリングF）。</div>
 
 </div>
 <script src="app.js"></script>

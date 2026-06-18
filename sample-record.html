@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>サンプル: サンリゾート沖縄 | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="sample">
+<div class="wrap">
+
+  <div class="rec-head">
+    <div class="rec-top">
+      <span class="obj-icon o-sample lg">🧴</span>
+      <div class="meta">
+        <div class="crumb"><a href="sample-follow.html">サンプル</a></div>
+        <h1>SMP-20455 ・ サンリゾート 沖縄</h1>
+      </div>
+      <div class="acts">
+        <a class="btn" href="activity-input.html">追客を記録</a>
+        <a class="btn primary" href="#">転換にする</a>
+      </div>
+    </div>
+    <div class="rec-fields">
+      <div class="rf"><span class="l">送付先（施設）</span><span class="v"><a href="facility-detail.html">サンリゾート 沖縄</a></span></div>
+      <div class="rf"><span class="l">サンプル品番</span><span class="v">A95G</span></div>
+      <div class="rf"><span class="l">送付日</span><span class="v">2026-05-29</span></div>
+      <div class="rf"><span class="l">追客予定</span><span class="v" style="color:var(--red)">2026-06-12（超過）</span></div>
+      <div class="rf"><span class="l">状況</span><span class="v">追客遅延</span></div>
+    </div>
+  </div>
+
+  <div class="rec-tabs">
+    <a class="on" href="#detail">詳細</a>
+    <a href="#related">関連</a>
+  </div>
+
+  <div class="rec-cols">
+    <div>
+      <div class="detail-sec" id="detail">
+        <h3><span class="caret">▾</span> サンプル 情報</h3>
+        <div class="fgrid">
+          <div class="fitem"><div class="l"><span class="req">*</span>送付先（施設）</div><div class="v">サンリゾート 沖縄 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l"><span class="req">*</span>サンプル品番</div><div class="v">A95G スキンケアパウチ <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">数量</div><div class="v">50 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">原価（自動計算）</div><div class="v">¥6,000（品番単価×数量）<span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">登録者</div><div class="v">営業事務 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l"><span class="req">*</span>送付日</div><div class="v">2026-05-29 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">追客予定（10営業日後）</div><div class="v">2026-06-12 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">状況</div><div class="v">追客遅延 <span class="pencil">✎</span></div></div>
+          <div class="fitem"><div class="l">転換（受注化）</div><div class="v">未 <span class="pencil">✎</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="related act-panel">
+        <div class="rl-hd"><span class="obj-icon o-act">📋</span> 活動<span class="sp"></span><a class="more" href="activity-input.html">記録</a></div>
+        <div class="tl">
+          <div class="item"><span class="dot" style="border-color:var(--red)"></span><div class="when">本日 ・ アラート</div><div class="body">追客予定を超過（10営業日）</div></div>
+          <div class="item"><span class="dot"></span><div class="when">5/29 ・ サンプル送付</div><div class="body">A95G ×50 を送付（営業事務）</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:14px">💡 サンプル管理カスタムオブジェクトのレコード。送付→追客→転換のフロー。10営業日後に追客アラート、原価は品番から自動計算（ヒアリングF）。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
