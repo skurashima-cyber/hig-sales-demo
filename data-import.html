@@ -74,7 +74,22 @@
     </div>
   </div>
 
-  <div class="demo-note" style="margin-top:14px">💡 取込は顧客コード5桁・品番をキーに突合。不一致は<a href="mapping.html">対応表整備</a>へ送る。DHCベース(1-12月)/HIGベース(4-3月)・税抜で集計。<b>前回MTG: データ投入は全要件が固まってから整理して実施（先に全部入れるとノイズ化）。出荷周り・Tシステム連動は田本さんと別アジェンダで協議</b>。連携方式と移行範囲は要確認。</div>
+  <!-- 売上データソース設計（前回MTG反映） -->
+  <div class="card" style="margin-bottom:14px">
+    <div class="hd">売上データソース設計（当月 / 過去月）<span class="sub">前回MTG決定</span></div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>対象</th><th>データソース</th><th>取得方法</th><th>用途</th></tr></thead>
+        <tbody>
+          <tr><td><b>当月売上</b></td><td>Tシステム 出荷データ</td><td><span class="pill green">リアルタイム</span></td><td>週報・チームDBの当月値</td></tr>
+          <tr><td><b>過去月売上</b></td><td>売上管理マスター（月次確定）</td><td><span class="pill blue">確定値を参照</span></td><td>推移・昨対・年度達成率</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="bd" style="border-top:1px solid var(--line)"><p class="help">先に<b>Tシステムのデータマッピングを完了→箱（データ構造）を先に作成</b>し、その後にダッシュボードを接続（前回MTGアクション）。</p></div>
+  </div>
+
+  <div class="demo-note" style="margin-top:14px">💡 取込は顧客コード5桁・品番をキーに突合。不一致は<a href="mapping.html">対応表整備</a>へ送る。DHCベース(1-12月)/HIGベース(4-3月)・税抜で集計。<b>当月=Tシステム出荷データ(リアルタイム)／過去月=売上管理マスター(確定値)</b>。データ投入は全要件確定後。商品別・チャンネル別も柔軟に集計。</div>
 
 </div>
 <script src="app.js"></script>

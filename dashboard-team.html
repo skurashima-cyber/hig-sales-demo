@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>営業チームダッシュボード | HIG 営業デモ</title>
+<title>チームダッシュボード | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="dash">
@@ -12,31 +12,76 @@
   <div class="page-head">
     <div class="icon">👥</div>
     <div>
-      <div class="eyebrow">ダッシュボード</div>
-      <h1>営業チームダッシュボード</h1>
+      <div class="eyebrow">チームダッシュボード</div>
+      <h1>営業チームダッシュボード — 松島チーム</h1>
     </div>
   </div>
 
   <div class="toolbar">
-    <span class="chip on">直販チーム</span><span class="chip">東京マツシマ</span><span class="chip">JTB商事</span><span class="chip">ニシカワヤ</span>
+    <span class="chip on">松島チーム</span><span class="chip">直販</span><span class="chip">東京マツシマ</span><span class="chip">全社</span>
     <span class="grow"></span>
-    <span class="muted">売上比較軸:</span>
-    <span class="chip on">月次</span><span class="chip">3ヶ月平均</span><span class="chip">新規</span>
+    <span class="chip on">HIGベース(4-3月)</span><span class="chip">DHCベース(1-12月)</span>
   </div>
 
-  <!-- 売上 -->
-  <div class="section-title">売上</div>
+  <div class="demo-note">⚠️ 前回MTG反映: ブロック順を<b>アジェンダ順（①売上=過去のファクト → ②案件=未来の見込み）</b>に。<b>3ヶ月推移（月ブロック）・昨年比較</b>を含め、<b>数字の意味（良い/悪いペース）が一目で</b>分かる見せ方に。</div>
+
+  <!-- ===== ① 売上カテゴリー（過去のファクト） ===== -->
+  <div class="section-title">① 売上（過去のファクト：達成率・トレンド・3ヶ月推移）</div>
   <div class="grid g4" style="margin-bottom:16px">
-    <div class="kpi"><div class="label">当月売上</div><div class="val">¥58.4<small>M</small></div><div class="delta up">▲ 前年同月 +6.4%</div></div>
-    <div class="kpi"><div class="label">3ヶ月平均</div><div class="val">¥54.1<small>M</small></div><div class="delta up">▲ +4.8%</div></div>
-    <div class="kpi"><div class="label">新規（当月）</div><div class="val">¥11.0<small>M</small></div><div class="delta up">▲ 12施設</div></div>
+    <div class="kpi"><div class="label">当月売上</div><div class="val">¥58.4<small>M</small></div><div class="delta up">▲ 昨年同月比 +6.4%</div></div>
     <div class="kpi"><div class="label">月次累計 / 目標</div><div class="val">78<small>%</small></div><div class="delta flat">目標 ¥75M</div></div>
+    <div class="kpi"><div class="label">年度 達成率</div><div class="val">26<small>%</small></div><div class="delta down">▼ 日数進捗25%より僅差</div></div>
+    <div class="kpi"><div class="label">3ヶ月平均</div><div class="val">¥54.1<small>M</small></div><div class="delta up">▲ +4.8%</div></div>
   </div>
 
-  <!-- 着地予測 ＋ 営業日数進捗（前回MTG反映） -->
   <div class="grid g2" style="margin-bottom:16px">
     <div class="card">
-      <div class="hd">年度内 着地予測（目標との差し引き）<span class="sub">プラス見込 − ロスト</span></div>
+      <div class="hd">3ヶ月推移（月ブロック）・昨年比較</div>
+      <div class="bd">
+        <svg viewBox="0 0 360 150" width="100%" height="150" class="spark">
+          <!-- 当年 bars -->
+          <rect x="30" y="70" width="46" height="70" fill="#0176d3"/><rect x="150" y="58" width="46" height="82" fill="#0176d3"/><rect x="270" y="50" width="46" height="90" fill="#0176d3"/>
+          <!-- 昨年 bars (薄) -->
+          <rect x="80" y="86" width="20" height="54" fill="#c9ced6"/><rect x="200" y="80" width="20" height="60" fill="#c9ced6"/><rect x="320" y="76" width="20" height="64" fill="#c9ced6"/>
+        </svg>
+        <div class="legend"><span><i style="background:#0176d3"></i>当年</span><span><i style="background:#c9ced6"></i>昨年</span><span class="muted">4月 / 5月 / 6月</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd">目標達成ペース（数字の意味が一目で）</div>
+      <div class="bd">
+        <div class="bar"><span class="name">年度達成率</span><span class="track"><span class="fill a" style="width:26%"></span></span><span class="v">26%</span></div>
+        <div class="bar"><span class="name">あるべき(営業日数)</span><span class="track"><span class="fill" style="width:25%;background:#c9ced6"></span></span><span class="v">25%</span></div>
+        <p class="help" style="color:var(--green)">✓ 営業日ベース(50/200日=25%)に対し達成26% → <b>ほぼオンペース</b>。<span style="color:var(--red)">赤=遅れ／緑=良好</span>で即判断。</p>
+        <hr class="sep">
+        <div class="section-title" style="margin:0 0 8px">個人貢献度（当月売上）</div>
+        <div class="bar"><span class="name">三原</span><span class="track"><span class="fill" style="width:80%"></span></span><span class="v">¥22M</span></div>
+        <div class="bar"><span class="name">櫻井</span><span class="track"><span class="fill" style="width:58%"></span></span><span class="v">¥16M</span></div>
+        <div class="bar"><span class="name">田村</span><span class="track"><span class="fill" style="width:44%"></span></span><span class="v">¥12M</span></div>
+        <div class="bar"><span class="name">佐久間</span><span class="track"><span class="fill" style="width:30%"></span></span><span class="v">¥8M</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:24px">
+    <div class="hd">主要チェーン別 売上（昨対）</div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>チェーン</th><th class="num">当月</th><th class="num">昨年同月</th><th class="num">昨対</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">グランビューHD</td><td class="num">¥22M</td><td class="num">¥19M</td><td class="num" style="color:var(--green)">+16%</td></tr>
+          <tr><td class="lk">都ホテルチェーン</td><td class="num">¥16M</td><td class="num">¥17M</td><td class="num" style="color:var(--red)">-6%</td></tr>
+          <tr><td class="lk">サンリゾート</td><td class="num">¥11M</td><td class="num">¥9M</td><td class="num" style="color:var(--green)">+22%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ===== ② 案件カテゴリー（未来の見込み） ===== -->
+  <div class="section-title">② 案件（未来の見込み：案件進捗・年度内着地予測）</div>
+  <div class="grid g2" style="margin-bottom:16px">
+    <div class="card">
+      <div class="hd">年度内 着地予測（目標との差し引き）</div>
       <div class="bd">
         <div class="bar"><span class="name">年度目標</span><span class="track"><span class="fill" style="width:100%;background:#c9ced6"></span></span><span class="v">¥180M</span></div>
         <div class="bar"><span class="name">受注済</span><span class="track"><span class="fill g" style="width:42%"></span></span><span class="v">¥76M</span></div>
@@ -44,87 +89,46 @@
         <div class="bar"><span class="name">−ロスト(年度内残月)</span><span class="track"><span class="fill" style="width:11%;background:var(--red)"></span></span><span class="v">−¥20M</span></div>
         <hr class="sep" style="margin:8px 0">
         <div class="bar"><span class="name"><b>着地予測</b></span><span class="track"><span class="fill a" style="width:64%"></span></span><span class="v"><b>¥115M</b></span></div>
-        <p class="help" style="color:var(--red)">目標 ¥180M に対し着地 ¥115M（64%）＝ <b>ペースが遅れ</b>。あと ¥65M の上積みが必要。</p>
+        <p class="help" style="color:var(--red)">目標¥180Mに対し着地¥115M(64%) → あと¥65Mの上積みが必要。</p>
       </div>
     </div>
     <div class="card">
-      <div class="hd">営業日数進捗ベース</div>
+      <div class="hd">パイプライン（フェーズ別・未来の見込み）</div>
       <div class="bd">
-        <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">営業日 経過（年間200日）</div><div class="val">50<small>/200日</small></div><div class="delta flat">あるべき進捗 25%</div></div>
-        <div class="bar" style="margin-top:12px"><span class="name">あるべき(日数)</span><span class="track"><span class="fill" style="width:25%;background:#c9ced6"></span></span><span class="v">25%</span></div>
-        <div class="bar"><span class="name">実績 進捗</span><span class="track"><span class="fill" style="width:14%;background:var(--red)"></span></span><span class="v">14%</span></div>
-        <p class="help">日数では25%まで来るべきところ実績14% → 遅れを早期検知（前回MTG: 「ペース悪いやん」が一目で分かる）。</p>
+        <div class="bar"><span class="name">情報収集済</span><span class="track"><span class="fill" style="width:90%"></span></span><span class="v">¥44M</span></div>
+        <div class="bar"><span class="name">営業済</span><span class="track"><span class="fill" style="width:62%"></span></span><span class="v">¥31M</span></div>
+        <div class="bar"><span class="name">内定</span><span class="track"><span class="fill a" style="width:40%"></span></span><span class="v">¥20M</span></div>
+        <div class="bar"><span class="name">受注</span><span class="track"><span class="fill g" style="width:24%"></span></span><span class="v">¥12M</span></div>
       </div>
     </div>
   </div>
 
   <div class="grid g2" style="margin-bottom:16px">
     <div class="card">
-      <div class="hd">売上推移（月次 / 3ヶ月平均）</div>
-      <div class="bd">
-        <svg viewBox="0 0 320 140" width="100%" height="140" class="spark">
-          <polyline fill="none" stroke="#d8dde6" stroke-width="2" points="0,110 60,100 120,92 180,84 240,78 300,70"/>
-          <polyline fill="none" stroke="#0176d3" stroke-width="3" points="0,118 60,96 120,104 180,80 240,86 300,62"/>
-          <circle cx="300" cy="62" r="4" fill="#0176d3"/>
-        </svg>
-        <div class="legend"><span><i style="background:#0176d3"></i>月次</span><span><i style="background:#d8dde6"></i>3ヶ月平均</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="hd">主要チェーン別 売上</div>
-      <div class="bd">
-        <div class="bar"><span class="name">グランビューHD</span><span class="track"><span class="fill" style="width:90%"></span></span><span class="v">¥22M</span></div>
-        <div class="bar"><span class="name">都ホテルチェーン</span><span class="track"><span class="fill" style="width:64%"></span></span><span class="v">¥16M</span></div>
-        <div class="bar"><span class="name">サンリゾート</span><span class="track"><span class="fill a" style="width:44%"></span></span><span class="v">¥11M</span></div>
-        <div class="bar"><span class="name">やまと温泉</span><span class="track"><span class="fill g" style="width:36%"></span></span><span class="v">¥9M</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid g2" style="margin-bottom:16px">
-    <!-- サンプルフォロー -->
-    <div class="card">
-      <div class="hd">サンプルフォロー</div>
+      <div class="hd">主要案件ステータス（重点）</div>
       <div class="bd" style="padding:0">
         <table class="tbl">
-          <thead><tr><th>送付先（施設）</th><th>担当</th><th>送付日</th><th>状況</th></tr></thead>
+          <thead><tr><th>案件</th><th class="num">年間見込</th><th>ステージ</th><th class="num">確度</th></tr></thead>
           <tbody>
-            <tr><td class="lk">サンリゾート 沖縄</td><td>三原</td><td>5/29</td><td><span class="pill red">追客遅延</span></td></tr>
-            <tr><td class="lk">やまと温泉 草津</td><td>櫻井</td><td>6/9</td><td><span class="pill amber">追客中</span></td></tr>
-            <tr><td class="lk">グランビュー箱根</td><td>田村</td><td>6/2</td><td><span class="pill green">転換</span></td></tr>
+            <tr><td class="lk"><a href="opportunity.html">グランビューHD 2026春</a></td><td class="num">¥24.0M</td><td><span class="pill amber">内定</span></td><td class="num">80%</td></tr>
+            <tr><td class="lk"><a href="opportunity.html">都ホテル PB改定</a></td><td class="num">¥18.5M</td><td><span class="pill blue">営業済</span></td><td class="num">50%</td></tr>
           </tbody>
         </table>
+        <div class="bd" style="border-top:1px solid var(--line)"><p class="help">重点(100万↑)の消し込みは<a href="attack-list.html">アタックリスト</a>で管理。</p></div>
       </div>
     </div>
-    <!-- ロスト -->
     <div class="card">
-      <div class="hd">ロスト管理</div>
+      <div class="hd">ロスト（年度内残月で着地に反映）<span class="sub">サンプルフォローは回っているか程度</span></div>
       <div class="bd">
-        <p class="help">判定: 発注なし&ヒアリング済 / または 3年発注なし</p>
         <div class="bar"><span class="name">価格</span><span class="track"><span class="fill" style="width:80%"></span></span><span class="v">8件</span></div>
         <div class="bar"><span class="name">競合採用</span><span class="track"><span class="fill" style="width:50%"></span></span><span class="v">5件</span></div>
         <div class="bar"><span class="name">3年発注なし</span><span class="track"><span class="fill" style="width:40%"></span></span><span class="v">4件</span></div>
-        <div class="bar"><span class="name">施設閉館</span><span class="track"><span class="fill" style="width:20%"></span></span><span class="v">2件</span></div>
+        <p class="help">サンプルフォローはチームでは「回っているか」程度で十分（個人は各チーム内）。詳細は<a href="lost.html">ロスト管理</a>。</p>
       </div>
     </div>
   </div>
 
-  <!-- 主要案件 -->
-  <div class="card">
-    <div class="hd">主要案件ステータス</div>
-    <div class="bd" style="padding:0">
-      <table class="tbl">
-        <thead><tr><th>案件名</th><th>チェーン</th><th class="num">年間見込</th><th>ステージ</th><th class="num">確度</th></tr></thead>
-        <tbody>
-          <tr><td class="lk"><a href="opportunity.html">2026春 新規導入</a></td><td>グランビューHD</td><td class="num">¥24.0M</td><td><span class="pill amber">内定</span></td><td class="num">80%</td></tr>
-          <tr><td class="lk"><a href="opportunity.html">PB改定提案</a></td><td>都ホテルチェーン</td><td class="num">¥18.5M</td><td><span class="pill blue">営業済</span></td><td class="num">50%</td></tr>
-          <tr><td class="lk"><a href="opportunity.html">開業案件_沖縄</a></td><td>サンリゾート</td><td class="num">¥9.2M</td><td><span class="pill blue">情報収集済</span></td><td class="num">30%</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="demo-note" style="margin-top:16px">💡 前回MTG反映: <b>着地予測（受注＋プラス見込−年度内残月のロスト vs 目標）</b>と<b>営業日数進捗</b>を上部に追加し「ペースの遅れ」を一目で。サンプルフォローはチームでは<b>「回っているか」程度</b>で十分（個人単位の細かい管理は各チーム内・優先度↓）。<a href="attack-list.html">アタックリスト</a>で重点案件の消し込みを確認。</div>
+  <div class="demo-note">💡 チームDB表示（前回MTG）: チーム目標達成率・売上推移・個人貢献度。①売上（過去ファクト）→②案件（未来見込み）のブロック順。3ヶ月推移は月ブロック＋昨年比較。当月売上=Tシステム出荷データ（リアルタイム）／過去月=売上管理マスター参照。</div>
 
 </div>
 <script src="app.js"></script>

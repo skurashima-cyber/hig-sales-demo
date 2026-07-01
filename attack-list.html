@@ -16,7 +16,7 @@
       <div class="lv-title">松島チーム ターゲット<span class="caret">▾</span></div>
       <div class="sub">毎週のチームMTGで「今どこを狙うか／どこまで消し込めたか」を確認する画面</div>
     </div>
-    <div class="acts"><a class="btn" href="#">ターゲット追加</a><a class="btn primary" href="opportunity.html">商談化</a></div>
+    <div class="acts"><a class="btn" href="#">ターゲット追加</a><a class="btn" href="#">ランク/見込を一括更新</a><a class="btn primary" href="opportunity.html">☑ 選択を一括 商談化</a></div>
   </div>
 
   <div class="lv-tabs">
@@ -38,7 +38,16 @@
     <div class="kpi"><div class="label">重点ターゲット</div><div class="val">14<small>件</small></div><div class="delta flat">100万円以上</div></div>
     <div class="kpi"><div class="label">年間見込 合計</div><div class="val">¥182<small>M</small></div><div class="delta up">▲ 確度加重 ¥104M</div></div>
     <div class="kpi"><div class="label">年度内見込 合計</div><div class="val">¥118<small>M</small></div><div class="delta flat">導入月から自動算出</div></div>
-    <div class="kpi"><div class="label">消し込み率</div><div class="val">43<small>%</small></div><div class="delta up">▲ 受注/継続発注ベース</div></div>
+    <div class="kpi"><div class="label">消し込み率（提案フェーズ以降）</div><div class="val">43<small>%</small></div><div class="delta flat">接触のみは別集計</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom:14px">
+    <div class="hd">消し込みの内訳（接触は1段ブレイクダウンで別途）</div>
+    <div class="bd">
+      <div class="bar"><span class="name">提案フェーズ以降</span><span class="track"><span class="fill g" style="width:43%"></span></span><span class="v">43% ← 消し込み</span></div>
+      <div class="bar"><span class="name">（参考）接触済み</span><span class="track"><span class="fill" style="width:82%;background:#c9ced6"></span></span><span class="v">82%</span></div>
+      <p class="help">前回MTG結論: <b>消し込みは「提案フェーズ」以降</b>を対象（接触=消し込みにすると80%超で目的と反する）。接触件数は参考として別表示。</p>
+    </div>
   </div>
 
   <table class="lvt">
@@ -68,7 +77,7 @@
     </tbody>
   </table>
 
-  <div class="demo-note" style="margin-top:14px">💡 前回MTG反映: <b>100万円以上に絞って重点管理</b>（小口は優先度↓）。<b>チェーン本部／オープン施設／個店</b>を区分。優先度は<b>ランク(SS/S/A)×金額×確度</b>の多軸（ランク=ポテンシャル、金額・確度=見込み精度）。毎週チームMTGで「どこを狙う→どこまで消し込めた」を確認。見込みが無い枠は新規開拓ターゲットを追加。チーム別に表示（松島チームなら松島だけ）。</div>
+  <div class="demo-note" style="margin-top:14px">💡 前回MTG反映: <b>100万円以上で自動反映</b>（小口は優先度↓）。タブ切替でチーム別／チェーン本部／オープン／全社。上部に<b>件数×年間見込×確度の掛け算で見込み自動集計</b>。<b>「ターゲット追加」で新規登録／チェックして「一括 商談化」／ランク・見込の一括更新</b>（Excelライク）。消し込みは<b>提案フェーズ以降</b>（接触は別集計）。</div>
 
 </div>
 <script src="app.js"></script>

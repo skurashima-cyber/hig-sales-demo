@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>個人ダッシュボード | HIG 営業デモ</title>
+<title>個人ホーム | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="dash">
@@ -12,74 +12,83 @@
   <div class="page-head">
     <div class="icon">🧑</div>
     <div>
-      <div class="eyebrow">ダッシュボード</div>
-      <h1>個人ダッシュボード — 三原（直販）</h1>
+      <div class="eyebrow">個人ホーム（自分の管理用）</div>
+      <h1>個人ホーム — 三原（直販）</h1>
     </div>
-    <div class="actions"><a class="btn" href="activity-input.html">活動を記録</a></div>
+    <div class="actions"><a class="btn" href="#">画面をカスタマイズ</a><a class="btn primary" href="activity-input.html">活動を記録</a></div>
   </div>
 
-  <div class="toolbar">
-    <span class="chip on">担当: 三原</span><span class="chip">櫻井</span><span class="chip">田村</span><span class="chip">佐久間</span>
-    <span class="grow"></span>
-    <span class="muted">期間: 当月 ／ 全員共通フォーマット</span>
-  </div>
+  <div class="demo-note">⚠️ 前回MTG反映: 個人ホームは<b>「個人で管理すべきもの」だけに絞る（売上数字は載せない）</b>。売上・チーム目標は<a href="dashboard-team.html">チームダッシュボード</a>で確認。各自でカスタマイズ可。</div>
 
-  <!-- 統一項目（ヒアリングI 個人） -->
-  <div class="section-title">実績（統一項目）</div>
+  <!-- 対応アラート（最優先） -->
   <div class="grid g4" style="margin-bottom:16px">
-    <div class="kpi"><div class="label">見込み金額（年間）</div><div class="val">¥32<small>M</small></div><div class="delta up">▲ +4M</div></div>
-    <div class="kpi"><div class="label">見込み 件数</div><div class="val">14<small>件</small></div><div class="delta flat">確度加重</div></div>
-    <div class="kpi"><div class="label">既存フォロー件数</div><div class="val">24<small>件</small></div><div class="delta up">▲ 内容内訳あり</div></div>
-    <div class="kpi"><div class="label">見込フォロー件数</div><div class="val">9<small>件</small></div><div class="delta flat">目標 12</div></div>
-  </div>
-
-  <div class="section-title">新規（金額 / 件数 / 商品）</div>
-  <div class="grid g3" style="margin-bottom:16px">
-    <div class="kpi"><div class="label">新規 金額</div><div class="val">¥11<small>M</small></div><div class="delta up">▲ +2施設</div></div>
-    <div class="kpi"><div class="label">新規 件数（施設数）</div><div class="val">5<small>施設</small></div><div class="delta up">▲</div></div>
-    <div class="kpi"><div class="label">新規 主要商品</div><div class="val" style="font-size:18px">A95G</div><div class="delta flat">スキンケアパウチ</div></div>
+    <div class="kpi"><div class="label">対応アラート</div><div class="val" style="color:var(--red)">4<small>件</small></div><div class="delta down">▼ 要対応</div></div>
+    <div class="kpi"><div class="label">本日のネクストアクション</div><div class="val">3<small>件</small></div></div>
+    <div class="kpi"><div class="label">サンプル追客 待ち</div><div class="val" style="color:var(--amber)">2<small>件</small></div><div class="delta down">▼ 10営業日超1件</div></div>
+    <div class="kpi"><div class="label">担当 見込み案件</div><div class="val">8<small>件</small></div><div class="delta flat">重点(100万↑) 3件</div></div>
   </div>
 
   <div class="grid g2" style="margin-bottom:16px">
+    <!-- 対応アラート -->
     <div class="card">
-      <div class="hd">既存フォロー（内容内訳）</div>
-      <div class="bd">
-        <div class="bar"><span class="name">定期訪問</span><span class="track"><span class="fill" style="width:75%"></span></span><span class="v">11件</span></div>
-        <div class="bar"><span class="name">追加提案</span><span class="track"><span class="fill p" style="width:50%"></span></span><span class="v">7件</span></div>
-        <div class="bar"><span class="name">クレーム/相談</span><span class="track"><span class="fill a" style="width:28%"></span></span><span class="v">4件</span></div>
-        <div class="bar"><span class="name">価格改定対応</span><span class="track"><span class="fill g" style="width:14%"></span></span><span class="v">2件</span></div>
-        <p class="help">「既存フォロー件数」は内容（内訳）も持つ（ヒアリングI）。</p>
+      <div class="hd" style="color:var(--red)">⚠️ 対応アラート（期限漏れ・サンプル未対応）</div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <tbody>
+            <tr><td><span class="pill red">期限超過</span></td><td class="lk"><a href="opportunity.html">グランビューHD 内定フォロー</a></td><td class="muted">6/16</td></tr>
+            <tr><td><span class="pill red">追客遅延</span></td><td class="lk"><a href="sample-record.html">サンR沖縄 サンプル(10営業日超)</a></td><td class="muted">13日</td></tr>
+            <tr><td><span class="pill amber">本日</span></td><td class="lk">やまと温泉 提案訪問</td><td class="muted">14:00</td></tr>
+            <tr><td><span class="pill amber">タスク未完</span></td><td class="lk">都ホテル 見積送付</td><td class="muted">本日</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
+    <!-- ネクストアクション -->
     <div class="card">
-      <div class="hd">活動量（週次推移）<span class="sub">訪問 / TEL / DM</span></div>
-      <div class="bd">
-        <svg viewBox="0 0 320 130" width="100%" height="130" class="spark">
-          <rect x="20"  y="60" width="16" height="60" fill="#0176d3"/><rect x="38" y="40" width="16" height="80" fill="#5867e8"/><rect x="56" y="95" width="16" height="25" fill="#9aa5b1"/>
-          <rect x="110" y="50" width="16" height="70" fill="#0176d3"/><rect x="128" y="55" width="16" height="65" fill="#5867e8"/><rect x="146" y="90" width="16" height="30" fill="#9aa5b1"/>
-          <rect x="200" y="45" width="16" height="75" fill="#0176d3"/><rect x="218" y="35" width="16" height="85" fill="#5867e8"/><rect x="236" y="100" width="16" height="20" fill="#9aa5b1"/>
-          <rect x="290" y="40" width="16" height="80" fill="#0176d3"/>
-        </svg>
-        <div class="legend"><span><i style="background:#0176d3"></i>訪問</span><span><i style="background:#5867e8"></i>TEL</span><span><i style="background:#9aa5b1"></i>DM(未定)</span><span class="muted">W22→W25</span></div>
+      <div class="hd">ネクストアクション（ToDo）<span class="sub"><a href="todos.html">すべて</a></span></div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <tbody>
+            <tr><td><input type="checkbox"></td><td class="lk">グランビューHD：本社決済の最終確認</td><td class="muted">6/27</td></tr>
+            <tr><td><input type="checkbox"></td><td class="lk">サンリゾート沖縄：サンプル追客TEL</td><td class="muted">本日</td></tr>
+            <tr><td><input type="checkbox"></td><td class="lk">都ホテル京都：見積条件すり合わせ</td><td class="muted">6/28</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 
-  <div class="card">
-    <div class="hd">担当案件</div>
-    <div class="bd" style="padding:0">
-      <table class="tbl">
-        <thead><tr><th>案件名</th><th>チェーン/施設</th><th class="num">年間見込</th><th>ステージ</th><th>次アクション</th><th>次回</th></tr></thead>
-        <tbody>
-          <tr><td class="lk"><a href="opportunity.html">2026春 新規導入</a></td><td>グランビューHD</td><td class="num">¥24.0M</td><td><span class="pill amber">内定</span></td><td>本社決済の最終確認</td><td>6/20</td></tr>
-          <tr><td class="lk"><a href="opportunity.html">什器入替提案</a></td><td>サンリゾート 沖縄</td><td class="num">¥6.8M</td><td><span class="pill blue">情報収集済</span></td><td>サンプル追客TEL</td><td>本日</td></tr>
-          <tr><td class="lk"><a href="opportunity.html">UV・リップ拡販</a></td><td>都ホテル 京都</td><td class="num">¥3.2M</td><td><span class="pill blue">営業済</span></td><td>見積条件すり合わせ</td><td>6/23</td></tr>
-        </tbody>
-      </table>
+  <div class="grid g2">
+    <!-- 個人の見込み案件 -->
+    <div class="card">
+      <div class="hd">個人の見込み案件<span class="sub">重点(100万↑)は<a href="attack-list.html">アタックリスト</a></span></div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <thead><tr><th>案件</th><th>チェーン/施設</th><th class="num">年間見込</th><th class="num">年度内</th><th>ステージ</th><th class="num">確度</th></tr></thead>
+          <tbody>
+            <tr><td class="lk"><a href="opportunity.html">2026春 新規導入</a></td><td>グランビューHD</td><td class="num">¥24.0M</td><td class="num">¥16.0M</td><td><span class="pill amber">内定</span></td><td class="num">80%</td></tr>
+            <tr><td class="lk"><a href="opportunity.html">什器入替提案</a></td><td>サンR沖縄</td><td class="num">¥6.8M</td><td class="num">¥4.0M</td><td><span class="pill blue">情報収集済</span></td><td class="num">30%</td></tr>
+            <tr><td class="lk"><a href="opportunity.html">UV・リップ拡販</a></td><td>都ホテル京都</td><td class="num">¥3.2M</td><td class="num">¥2.1M</td><td><span class="pill blue">営業済</span></td><td class="num">60%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- サンプル追客 -->
+    <div class="card">
+      <div class="hd">サンプル追客（自分の担当）<span class="sub"><a href="sample-follow.html">一覧</a></span></div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <thead><tr><th>送付先</th><th>品番</th><th>送付日</th><th>状況</th></tr></thead>
+          <tbody>
+            <tr><td class="lk">サンR沖縄</td><td>A95G</td><td>5/29</td><td><span class="pill red">追客遅延</span></td></tr>
+            <tr><td class="lk">グランビュー箱根</td><td>SG-07</td><td>6/2</td><td><span class="pill green">転換</span></td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
-  <div class="demo-note" style="margin-top:16px">💡 個人表示項目（ヒアリングI）: 見込み金額件数・新規（金額/件数/商品）・既存フォロー件数（内容）・見込フォロー件数。全員共通フォーマット。</div>
+  <div class="demo-note" style="margin-top:16px">💡 個人ホームの構成（前回MTG）: 個人の見込み案件／対応アラート（タスク期限漏れ・サンプル送付後）／ネクストアクション／サンプル追客。売上数字は置かない。</div>
 
 </div>
 <script src="app.js"></script>
